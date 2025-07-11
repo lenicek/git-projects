@@ -77,7 +77,10 @@
 
 body {
   color: var(--color-gray-dark);
+
+  overflow-x: hidden;
 }
+
 
 p {
   margin-top: var(--gap-md);
