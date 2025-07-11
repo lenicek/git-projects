@@ -1,11 +1,17 @@
-const toggleBtn = document.getElementById('nav-toggle');
-const nav = document.getElementById('main-nav');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById('nav-toggle');
+  const nav = document.getElementById('main-nav');
 
-toggleBtn.addEventListener('click', () => {
-  const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-  toggleBtn.setAttribute('aria-expanded', !expanded);
-  nav.hidden = expanded;
+  // Start with collapsed nav
+  nav.hidden = true;
+  toggleBtn.setAttribute('aria-expanded', false);
 
-  // Update button icon
-  toggleBtn.innerHTML = expanded ? '&#9776;' : '&times;'; // ☰ or ✖
+  toggleBtn.addEventListener('click', () => {
+    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+    toggleBtn.setAttribute('aria-expanded', !expanded);
+    nav.hidden = expanded;
+
+    // Update button icon
+    toggleBtn.innerHTML = expanded ? '&#9776;' : '&times;'; // ☰ or ✖
+  });
 });
