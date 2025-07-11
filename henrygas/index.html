@@ -75,17 +75,17 @@
       </div>
     </section>
 
-    <section id="section2 " class="two-col-grid">
+    <section id="section2" class="two-col-grid">
       <!-- <div class="content-wrapper two-col-grid">-->
         <div class="our-company">
           <h2>Our company</h2>
           <p>EXPLORE WHAT WE BUILT</p>
-          <a href=".." class="btn">Discover more</a>
+          <a href="#" class="btn">Discover more</a>
         </div>
         <div class="our-vision">
           <h2>Our vision</h2>
         <p>EXPLORE OUR PLANS</p>
-        <a href=".." class="btn">Discover more</a>
+        <a href="#" class="btn">Discover more</a>
             </div>
       <!--</div> -->
 
@@ -95,7 +95,7 @@
       <div class="content-wrapper two-col-grid">
         <div class="s2-i"></div>
         <div class="s2-t">
-        <h2></h2>
+        <!-- <h2></h2> -->
         <p>Green fuel, also known as biofuel, is a type of fuel distilled from plants and animal materials, believed by some to be more environmentally friendly than the widely-used fossil fuels that power most of the world. In the desperate search for alternative energy sources, green fuel has evolved as a possible fueling option as the world drains its fossil fuel resources. Detractors suggest that the term “green fuel” is a misnomer, as the processing of crops into biofuel actually creates a considerable amount of pollution that may be just as damaging to the environment as current practices.</p>
         
         <p>In creating basic forms of biofuel, crops are broken down into two types: sugar producing and oil producing. Sugar and starch producing crops, such as sugar cane or corn, are put through a fermentation process to create ethanol. Oil producing plants, like those used in vegetable oils, can be used much like fossil sources of oil; they create diesel that can be burned by cars or further processed to become biodiesel.</p>
@@ -118,7 +118,7 @@
           
           <p>In creating basic forms of biofuel, crops are broken down into two types: sugar producing and oil producing. Sugar and starch producing crops, such as sugar cane or corn, are put through a fermentation process to create ethanol. Oil producing plants, like those used in vegetable oils, can be used much like fossil sources of oil; they create diesel that can be burned by cars or further processed to become biodiesel.</p>
         </div>
-        <div class="s4-i"><img src="img/battery01.jpg" alt=""></div>
+        <div class="s4-i"><img src="img/battery01.jpg" alt="obrázek zelené baterie"></div>
       </div>
     </section>
 
@@ -131,7 +131,7 @@
            <h3>Ondřej Douša</h3>
            <p>ondrej.dousa@henrygas.cz<br>+420 608 313 292</p>
            <h3>Petr Kalina</h3>
-           <p>petr.kalina@henrygas.cz <br>+420 601 737</p>
+           <p>petr.kalina@henrygas.cz <br>+420 601 737 222</p>
            <h3>Radek Matyáš</h3>
            <p>radek.matyas@henrygas.cz <br>+420 731 623 523</p>
         </div>
@@ -139,10 +139,13 @@
           <form id="contact-form" action="#" method="POST">
           <fieldset>
             
-        
+        <label for="name" class="sr-only">Your Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email" class="sr-only">Email Address</label>
         <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <label for="subject" class="sr-only">Subject</label>
         <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        <label for="message" class="sr-only">Write your message here...</label>
         <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
         
             <!-- Consent -->
