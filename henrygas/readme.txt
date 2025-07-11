@@ -16,3 +16,26 @@ Modern, clean UI inspired by the XD design.
 CSS custom properties for consistent theming.
 Lightweight JavaScript for basic interactivity.
 
+Tech StackHTML5: Semantic markup for accessibility and structure.
+CSS3: Styling with custom properties (CSS variables) for maintainability and flexibility.
+JavaScript: Minimal scripts for interactivity (e.g., navigation toggles or animations).
+Adobe XD: Design source for the layout.
+
+FeaturesResponsive design for desktop, tablet, and mobile.
+Modern, clean UI inspired by the XD design.
+CSS custom properties for consistent theming.
+Lightweight JavaScript for basic interactivity.
+
+
+Project structure
+
+henrygas/
+├── index.html           # Main HTML file
+├── css/
+│   └── styles.css       # CSS with custom properties
+├── js/
+│   └── script.js        # Minimal JavaScript
+├── assets/              # Images and other static files
+├── README.md            # This file
+└── .gitignore           # Excludes unnecessary files
+
