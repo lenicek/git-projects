@@ -333,6 +333,9 @@ padding-bottom: var(--space-lg);
 
 /*  Section 2 */
 
+#section2 {
+  padding-inline: 0px;
+}
 
 #section2 .content-wrapper {
 display: grid;
@@ -542,6 +545,11 @@ footer .content-wrapper {
   background-position: center;
   background-size: cover;
   }
+
+  #section2 {
+  padding-inline: 0px;
+}
+
   #section3 {   
   background:  url(../img/section3-bg.jpg);
   background-position: center;
