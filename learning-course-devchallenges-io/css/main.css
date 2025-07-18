@@ -1,0 +1,103 @@
+:root {
+
+/*---- Basic font size  and family ---- */
+font-size: 16px; 
+font-size: clamp(15px, 1vw + 1rem, 18px);
+font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+
+/*-----  document color variables -----*/
+
+  /*  Dark Shades */
+  --color-bg-primary: #121826;
+  --color-bg-secondary: #212936;
+
+  /*  Neutrals */
+  --color-neutral-light: #E5E7EB;
+  --color-neutral: #D2D5DA;
+  --color-neutral-dark: #9DA3AE;
+
+  /*  Accents */
+  --color-accent-blue: #DEE9FC;
+  --color-accent-pink: #FBE5E6;
+  --color-accent-yellow: #FCEED8;   
+
+
+/*-----  document font sizes variables -----*/
+--font-sm: clamp(0.6rem, 1vw, 0.9rem);   
+--font-md: clamp(1rem, 2vw, 1.25rem);    
+--font-lg: clamp(1.5rem, 3vw, 2.5rem);   
+--font-xl: clamp(2rem, 4vw, 4rem);      
+
+}
+
+/*  Utility classes */
+
+
+
+body {
+    background: var(--color-bg-primary) url(../img/Background_image.svg);
+    color: var(--color-neutral-light);
+}
+
+h1 {
+    line-height: 2.2rem;
+}
+h2 {
+    font-size: 1.25rem;
+}
+p {
+    color: var(--color-neutral-dark);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 3rem;
+    padding-top: 3rem;
+    text-align: center;
+    
+}
+
+
+/*  CARD design */
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: var(--color-bg-secondary);
+    border: 0px solid;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    gap: 1rem
+
+}
+
+picture {
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+
+.ico1,
+.ico2,
+.ico3 {
+    display: flex;
+    flex-wrap: wrap;
+    aspect-ratio: 1/1;
+    width: 3.5rem;
+    border-radius: 50%;
+    background: var(--color-accent-pink);
+}
+
+
