@@ -98,6 +98,12 @@ picture {
     width: 3.5rem;
     border-radius: 50%;
     background: var(--color-accent-pink);
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
 }
+.ico1 { background: var(--color-accent-yellow);}
+.ico2 { background: var(--color-accent-blue);}
+.ico3 { background: var(--color-accent-pink);}
 
 
