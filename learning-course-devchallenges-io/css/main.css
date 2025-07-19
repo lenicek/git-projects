@@ -56,13 +56,22 @@ img {
   display: block;
 }
 
-.wrapper {
+.main-wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     gap: 2rem;
-    padding-inline: 3rem;
-    padding-top: 3rem;
+    padding: 3rem;
+    text-align: center;
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.5rem;
     text-align: center;
     
 }
@@ -79,7 +88,8 @@ img {
     border-radius: 1rem;
     padding: 1.5rem;
     text-align: left;
-    gap: 1rem
+    gap: 1rem;
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
 
 }
 
@@ -107,7 +117,7 @@ picture {
 .ico3 { background: var(--color-accent-pink);}
 
 @media (min-width: 768px) {
-    .wrapper {
+    .container {
         flex-direction: row ;
         justify-content: center;
     }
@@ -116,6 +126,11 @@ picture {
     }
     h1 {
     font-size: 2.5rem;
+}
+.main-wrapper {
+    padding-inline: 2rem;
+    padding-bottom: 3rem;
+        
 }
     
 }
