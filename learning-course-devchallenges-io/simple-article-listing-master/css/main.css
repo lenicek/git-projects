@@ -1,0 +1,125 @@
+:root {
+
+/*---- Basic font size  and family ---- */
+font-size: 16px; 
+font-family: "Poppins", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+
+/*-----  document color variables -----*/
+
+  /*  main contrast colors */
+  --color-bg-primary: #F8FAFC;
+  --color-bg-secondary: #000000;
+
+  /*  Neutrals */
+  --color-neutral: #D9D9D9;
+  --color-neutral-dark: #9DA3AE;
+
+}
+
+/*  Utility classes */
+
+body {
+    background: var(--color-bg-primary);
+    color: var(--color-neutral-light);
+}
+
+h1 {
+    display: block;
+    line-height: 1.25em;
+    font-weight: 600;
+    color: var(--color-bg-secondary);
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--color-bg-secondary);
+}
+a {
+    color: var(--color-neutral-dark);
+    font-size: 0.875em;
+    font-weight: 500;
+    
+}
+
+img {
+    width: 100%;
+}
+picture {
+  aspect-ratio: 1/1;
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+.main-wrapper {
+    max-width: 740px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em 1.5em;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+   }
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding-top: 1.5em;
+    text-align: left;
+  }
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+picture {
+    aspect-ratio: 1/1;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row ;
+        justify-content: center;
+    }
+
+.article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+ picture {
+  aspect-ratio: 1/1;
+  width: 25%;
+  flex-shrink: 0;
+
+} 
+
+  .caption {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+.main-wrapper {
+    padding-inline: 2em;
+    padding-bottom: 3em;
+        
+}
+    
+}
+
+
