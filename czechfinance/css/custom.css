@@ -1,0 +1,956 @@
+/* ==========================================
+   1. FONT DEFINITIONS
+   ========================================== */
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================
+   2. CUSTOM PROPERTIES / VARIABLES
+   ========================================== */
+:root {
+  /* Font families */
+  --font-main: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Font scale (fluid via clamp) */
+  --font-sm: clamp(0.6rem, 1vw, 0.9rem);   
+  --font-md: clamp(1rem, 2vw, 1.25rem);    
+  --font-lg: clamp(1.5rem, 2.5vw, 2.2rem);   
+  --font-xl: clamp(2rem, 4vw, 4.5rem);      
+
+  /* Spacing scale */
+  --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);  
+  --space-sm: clamp(0.5rem, 1vw, 1rem);       
+  --space-md: clamp(1rem, 2vw, 2rem);         
+  --space-lg: clamp(2rem, 4vw, 4rem);         
+  --space-xl: clamp(4rem, 6vw, 4.5rem);        
+
+  /* Gaps */
+  --gap-xs: var(--space-xs);
+  --gap-sm: var(--space-sm);
+  --gap-md: var(--space-md);
+  --gap-lg: var(--space-lg);
+
+  /* Color palette */
+  --color-primary-blue: #072960;    
+  --color-azure: #36A9F1; 
+  --color-accent-yellow: #EAAC03; 
+
+  /* Neutrální a chybějící odstíny (Doplněno) */
+  --color-primary-black: #1a1a1a;
+  --color-gray-dark: #333333;
+  --color-bg-light: #f9f9f9;    
+  --color-border-gray: #E0E0E0;   
+  --color-text-muted: #666666;    
+  --color-white: #FFFFFF;        
+
+  /* Stavy a hover */
+  --color-primary-red: #d32f2f;
+  --color-red-hover: #B2050F;
+}  
+
+/* ==========================================
+   3. GLOBAL & LAYOUT CONTAINERS
+   ========================================== */
+.content-wrapper {
+  max-width: 1660px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ==========================================
+   4. GRID / FLEX COLUMN SYSTEM
+   ========================================== */
+.f-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md); 
+  padding-block: var(--gap-md);
+  padding-inline: 1rem; 
+}
+
+.info-box {
+  background-color: var(--color-border-gray);
+  border-top: 0.8rem solid var(--color-primary-blue);
+  padding: var(--space-md);
+}
+
+/* Mobil defaultně 100% pro všechny flex sloupce */
+[class*="f-"] {
+  flex: 1 1 100%; 
+}
+
+/* DESKTOP GRID SYSTEM (od 768px) */
+@media (min-width: 768px) {
+  /* 2 sloupce (50 %) */
+  .f-2 { 
+    flex: 0 0 calc(50% - (var(--gap-md) / 2)); 
+    max-width: calc(50% - (var(--gap-md) / 2));
+  }
+  
+  /* 3 sloupce (33.33 %) */
+  .f-3 { 
+    flex: 0 0 calc((100% / 3) - (var(--gap-md) * 2 / 3)); 
+    max-width: calc((100% / 3) - (var(--gap-md) * 2 / 3));
+  }
+  
+  /* 4 sloupce (25 %) */
+  .f-4 { 
+    flex: 0 0 calc(25% - (var(--gap-md) * 3 / 4)); 
+    max-width: calc(25% - (var(--gap-md) * 3 / 4));
+  }
+
+  /* 5 sloupců (20 %) */
+  .f-5 {
+    flex: 0 0 calc(20% - (var(--gap-md) * 4 / 5));
+    max-width: calc(20% - (var(--gap-md) * 4 / 5));
+  }
+
+  /* Poměrové sloupce */
+  .f-8 { 
+    flex: 0 0 calc((100% * 2 / 3) - (var(--gap-md) * 1 / 3));
+    max-width: calc((100% * 2 / 3) - (var(--gap-md) * 1 / 3));
+  }
+
+  .f-9 { 
+    flex: 0 0 calc(75% - (var(--gap-md) * 1 / 4));
+    max-width: calc(75% - (var(--gap-md) * 1 / 4));
+  }
+
+  .f-40 { 
+    flex: 0 0 calc(40% - (var(--gap-md) * 3 / 5));
+    max-width: calc(40% - (var(--gap-md) * 3 / 5));
+  }
+
+  .f-60 { 
+    flex: 0 0 calc(60% - (var(--gap-md) * 2 / 5));
+    max-width: calc(60% - (var(--gap-md) * 2 / 5));
+  }
+
+  /* Vnořené řádky */
+  .f-2 > .f-row {
+    padding-block: var(--gap-sm);
+  }
+
+
+} 
+
+/* ==========================================
+   5. HEADER & NAVIGATION (Grid layout)
+   ========================================== */
+.main-header {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "logo nav phone";
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border-gray);
+  min-height: 125px;
+  z-index: 10;
+}
+
+#logo, 
+.site-logo {
+  grid-area: logo;
+  max-width: 280px;
+  margin-left: var(--space-lg);
+  color: var(--color-primary-black);
+  font-size: var(--font-lg);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone-button {
+  grid-area: phone;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  padding: 0.65rem 0.9rem;
+  border-radius: 1.4rem;
+  background: var(--color-azure);
+  color: var(--color-white);
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-decoration: none;
+  max-width: 250px;
+  justify-self: end; /* Zarovná tlačítko doprava ve 3. sloupci */
+}
+
+.phone-button:hover,
+.phone-button:focus-visible {
+  background: var(--color-primary-blue);
+}
+
+.phone-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: currentColor;
+}
+
+/* NAVIGATION */
+#main-nav {
+  grid-area: nav;
+  background-color: var(--color-white); 
+  color: var(--color-gray-dark);
+  padding: 1rem;
+  z-index: 10; 
+}
+
+#main-nav[hidden] {
+  display: none;
+}
+
+#main-nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav ul li {
+  list-style: none;
+}
+
+#main-nav ul li a {
+  display: inline-block;
+  font-size: var(--font-sm);
+  color: var(--color-primary-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus-visible {
+  color: var(--color-primary-red);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #main-nav[hidden] {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "logo toggle"
+      "nav nav"
+      "phone phone";
+    min-height: 0;
+  }
+
+
+  #logo,
+  .site-logo {
+    max-width: 190px;
+    margin-left: 0;
+  }
+
+  #logo svg,
+  .site-logo svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+    grid-area: toggle;
+    width: 3rem;
+    height: 3rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    padding: 0;
+    border: none;
+    background: var(--color-white);
+    color: var(--color-primary-blue);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 1.35rem;
+    height: 3px;
+    border-radius: 1.5px;
+    background: currentColor;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(0.5rem) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-0.5rem) rotate(-45deg);
+  }
+
+  #main-nav:not([hidden]) {
+    display: block;
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--color-border-gray);
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  #main-nav ul li a {
+    display: block;
+    padding: 0.7rem 0;
+    font-size: var(--font-md);
+    font-weight: 400;
+    text-align: right;
+  }
+
+  .phone-button {
+    width: 100%;
+    max-width: none;
+    margin-top: var(--space-xs);
+  }
+
+  .quick-contact > .content-wrapper {
+    flex-direction: column;
+  }
+
+  .quick-contact > .content-wrapper svg {
+    margin-left: 0;
+    margin-bottom: var(--space-lg);
+  }
+.partners > .content-wrapper svg {
+  margin: 1rem auto;
+}
+
+  .partners > .content-wrapper h2{
+    margin-left: 0;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+  }
+
+  .site-footer > .content-wrapper div{
+padding-inline: var(--space-md);
+
+  }
+
+.site-footer ul {
+  justify-content: flex-start!important;
+}
+}
+
+/* ==========================================
+   6. SECTIONS (Hero & Services)
+   ========================================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  min-height: 800px;
+  background-image: url('../img/hero-cf.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: var(--font-xl);
+  margin-bottom: var(--space-md);
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: var(--font-md);
+  margin-bottom: var(--space-md);
+  font-weight: 400;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  padding: 0.65rem 0.9rem;
+  border-radius: 1.4rem;
+  background: var(--color-accent-yellow);
+  color: var(--color-white);
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-decoration: none;
+  max-width: 250px;
+  margin-top: var(--space-md);
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-white);
+  color: var(--color-primary-blue);
+  min-height: 400px;
+}
+
+.service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  background-color: var(--color-azure);
+  border-radius: 1rem;
+  color: var(--color-white);
+}
+
+.service-card:nth-child(2) {
+  background-color: var(--color-primary-blue);
+}
+
+.service-card h2 {
+  font-size: var(--font-xl);
+  margin-block:var(--space-md);
+  font-weight: 600;
+}
+
+.service-card h2::after {
+  content: "";
+  display: block;
+  width: 164px;
+  height: 10px;
+  border-radius: 0.5rem;
+  margin-top: var(--space-sm);
+  background-color: var(--color-primary-blue);
+}
+
+.service-card:nth-child(2) h2::after {
+  background-color: var(--color-white);
+}
+
+.service-card p {
+  font-size: var(--font-md);
+  font-weight: 400;
+  padding-bottom: var(--space-xl);
+}
+.service-card a {
+  position: absolute;
+  display: inline-block;
+  margin-top: var(--space-md);
+  color: var(--color-white);
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-decoration: none;
+  bottom: var(--space-md);
+  right: var(--space-md);
+}
+
+/* benefits section */
+
+.benefits {
+  position: relative;
+  min-height: 430px;
+  padding: var(--space-lg) var(--space-md);
+  isolation: isolate;
+}
+
+.benefits::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  inset: 0;
+  background-color: var(--color-primary-blue);
+  clip-path: polygon(0 0, 100% 13%, 100% 87%, 0 100%);
+}
+
+.benefits-content {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 2fr;
+  align-items: center;
+  min-height: 330px;
+  padding-inline: var(--space-md);
+}
+
+.benefits h2 {
+  margin: 0;
+  color: var(--color-white);
+  font-size: var(--font-xl);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-md);
+  align-items: end;
+}
+
+.benefit-item {
+  text-align: center;
+}
+
+.benefit-item:first-child svg {
+  display: block;
+  width: min(168px, 100%);
+  height: auto;
+  margin: 0 auto var(--space-sm);
+}
+
+.benefit-item:nth-child(2) svg {
+  display: block;
+  width: min(112px, 100%);
+  height: auto;
+  margin: 0 auto var(--space-sm);
+}
+
+.benefit-item:nth-child(3) svg {
+  display: block;
+  width: min(101px, 100%);
+  height: auto;
+  margin: 0 auto var(--space-sm);
+}
+
+.benefit-item h3 {
+  margin: 0;
+  color: var(--color-accent-yellow);
+  font-size: var(--font-md);
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    background-position: right center;
+  }
+
+  .benefits {
+    min-height: auto;
+    padding-block: var(--space-lg);
+  }
+
+  .benefits::before {
+    clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
+  }
+
+  .benefits-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    min-height: auto;
+    padding-block: var(--space-lg);
+    margin-block: var(--space-lg);
+  }
+
+  .benefits h2 {
+    text-align: center;
+  }
+
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    justify-items: center;
+  }
+
+  .benefit-item {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* NEW CARS */
+.section-new-cars, .section-deals {
+  padding: 4rem var(--space-sm) 8rem;
+}
+
+.section-new-cars .section-title, .section-deals .section-title {
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-blue);
+  font-size: var(--font-xl);
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-new-cars > .content-wrapper, .section-deals > .content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-new-cars .car-card, .section-deals .car-card {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.section-new-cars .car-image, .section-deals .car-image {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.section-new-cars .car-image img, .section-deals .car-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-new-cars .car-title, .section-deals .car-title {
+  margin-top: var(--space-sm);
+  color: var(--color-primary-blue);
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-new-cars .divider, .section-deals .divider {
+  width: 100%;
+  height: 1px;
+  margin: var(--space-md) 0;
+  background-color: var(--color-white);
+}
+
+.section-new-cars .detail-item, .section-deals .detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-xs);
+  gap: var(--space-sm);
+}
+
+.section-new-cars .label, .section-deals .label {
+  color: var(--color-primary-black);
+  font-weight: 700;
+  text-align: left;
+}
+
+.section-new-cars .value, .section-deals .value {
+  color: var(--color-primary-black);
+  text-align: right;
+}
+
+.section-new-cars .price-main, .section-deals .price-main {
+  display: block;
+  width: 60%;
+  margin: var(--space-sm) auto 0;
+  padding: var(--space-sm);
+  color: var(--color-white);
+  background-color: var(--color-primary-blue);
+  border-radius: 4rem;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  text-align: center;
+}
+
+.section-new-cars .price-sub, .section-deals .price-sub {
+  color: var(--color-text-muted);
+  font-size: var(--font-sm);
+  text-align: center;
+  margin-top: var(--space-xs);
+}
+
+@media (max-width: 767px) {
+  .section-new-cars, .section-deals {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+
+}
+
+/* Banner */
+
+.banner {
+  position: relative;
+  min-height: 430px;
+  padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md);
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner:before {
+    position: absolute;
+  content: "";
+  z-index: -1;
+  inset: 0;
+  background-color: #def1fd;
+    clip-path: polygon(0 100%, 100% 87%, 100% 13%, 0 0);
+  }
+
+  /*  quick contact */
+  .quick-contact > .content-wrapper {
+    position: relative;
+    background-image: url('../img/quick-contact.png');
+    background-size: cover;
+    background-position: right center;
+    min-height: 430px;
+    padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md);
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+
+  .quick-contact h2 {
+    margin-left: var(--space-md);
+    color: var(--color-white);
+    font-size: var(--font-xl);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+ .quick-contact span {
+    color: var(--color-accent-yellow);
+  }
+   .quick-contact svg {
+    display: block;
+    width: min(168px, 100%);
+    height: auto;
+    margin-left:  var(--space-md);
+   }
+
+   .partners > .content-wrapper {
+    position: relative;
+    min-height: 430px;
+    padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md);
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: left;
+   }
+
+   .partners h2 {
+    margin-left: var(--space-md);
+    color: var(--color-azure);
+    font-size: var(--font-xl);
+    font-weight: 700;
+    line-height: 1.15;
+   }
+
+  /* ==========================================
+   Kontakt 
+   ========================================== */
+.contact {
+    position: relative;
+    background-image: url('../img/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+
+   }
+
+   .contact > .content-wrapper {
+    position: relative;
+    min-height: 430px;
+    padding: calc(var(--space-xl) + var(--space-lg)) var(--space-md);
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--color-white);
+    
+   }
+
+   .contact h2 {
+    margin-left: 0;
+    color: var(--color-white);
+    font-size: var(--font-lg);
+    font-weight: 700;
+    line-height: 1.15;
+   }
+
+ .contact h2, .contact p {
+    display: block;
+    margin-bottom:  var(--space-md);
+   }
+
+.contact svg {
+    display: block;
+    margin-bottom:  var(--space-xl);
+   }
+
+   .newsletter-consent {
+    display: flex;
+    gap: var(--gap-sm);
+    align-items: center;
+    margin-top: var(--space-md);
+   }
+.newsletter-consent p {
+padding: 0;
+margin: 0;
+   }
+
+   .newsletter-consent label {
+    font-size: var(--font-sm);
+    color: var(--color-white);
+   }
+   .mail-field {
+flex: 1;
+   }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    margin-top: calc(var(--space-xl) + var(--space-md));
+  }
+  .input-group input[type="email"] {
+    
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: var(--font-md);
+    background-color: var(--color-white);
+  }
+
+/* Placeholder color */
+.input-group input[type="email"]::placeholder {
+  color: var(--color-gray-dark);
+}
+
+/* Focused OR holds filled text (stays gray) */
+.input-group input[type="email"]:focus,
+.input-group input[type="email"]:not(:placeholder-shown) {
+  color: var(--color-gray-dark);
+}
+
+  .input-group label {
+    display: none;
+  }
+.input-group button {
+display: block;
+  color: var(--color-white);
+  border-radius: 2rem;
+  background: linear-gradient(180deg, #efb800 0%, #e49d08 72.5%, #e0930b 100%);
+  padding: 1rem 3rem;
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: var(--space-lg);
+  }
+
+div.f-2:nth-child(2) {
+  padding-left: var(--space-lg);
+  padding-top: var(--space-lg);
+}
+
+
+  /* ==========================================
+   FOOTER
+   ========================================== */
+.site-footer {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  padding-block: var(--space-sm);
+  font-size: var(--font-sm);
+}
+
+/* Mobilní výchozí stav: 1 sloupec */
+.site-footer > .content-wrapper {
+  display: grid;
+  gap: var(--gap-md);
+  grid-template-columns: 1fr;
+}
+
+/* Desktop od 768px: 3 sloupce */
+@media (min-width: 768px) {
+  .site-footer > .content-wrapper {
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+}
+
+.site-footer ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: var(--gap-md);
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer .social {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--gap-md);
+  padding: 0;
+  margin: 0;
+}
+  

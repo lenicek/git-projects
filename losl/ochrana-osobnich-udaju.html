@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Autobazar | LOSL s.r.o.</title>
+  <meta name="description" content="Vybírejte z 300 prověřených nákladních vozidel každý den v LOSL s.r.o.!  Patříme mezi největší bazary nákladních aut a užitkových vozů v České republice.">
+  <meta name="author" content="Autobazar | LOSL s.r.o.">
+  
+  <!-- Social Media Meta Tags -->
+	<meta property="og:title" content="Autobazar | LOSL s.r.o." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.losl.cz/cz/" />
+	<meta property="og:image" content="https://www.losl.cz/img/template/square_400x400-2.jpg" />
+	<meta property="og:description" content="Vybírejte z 300 prověřených nákladních vozidel každý den v LOSL s.r.o.!  Patříme mezi největší bazary nákladních aut a užitkových vozů v České republice." /> 
+	<meta property="og:site_name" content="LOSL s.r.o." />
+
+    <link rel="canonical" href="https://www.losl.cz/cz/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <!-- Reset CSS (loads first to normalize styling) -->
+  <link rel="stylesheet" href="css/reset.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- scripts  -->
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js" defer></script>
+
+<!-- FONTS -->
+<!-- Preconnect to speed up DNS and TLS handshake -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload the stylesheet (optional but can improve performance) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fallback for users with JavaScript disabled -->
+    <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+    </noscript>
+    
+</head>
+
+
+
+<body>    
+  <header class="main-header">
+      <div id="logo">
+        <a href="index.html" target="_self" alt="back to home"><img src="img/logo-losl.svg" alt="LOSL Logo" fetchpriority="high" ></a>
+      </div>
+      <button id="nav-toggle" aria-label="Open main menu" aria-expanded="false">☰</button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="o-firme.html" aria-current="page">O firmě</a></li>
+          <li><a href="nabidka-vozu.html">Nabídka vozidel</a></li>
+          <li><a href="navesy-kogel.html">Nové návěsy</a></li>
+          <li><a href="prodej-vozu.html">Prodej vozů</a></li>
+          <li><a href="vykup-vozu.html">Výkup vozů</a></li>
+          <li><a href="dovoz.html">Dovoz</a></li>
+          <li><a href="financovani-vozu.html">Financování</a></li>
+          <li><a href="https://www.czechfinance.cz/" target="blank">Pronájem</a></li>
+          <li><a href="servis-vozu.html">Servis</a></li>
+	        <li><a href="kontakty.html">Kontakty</a></li>
+          <li class="lang-switcher">
+            <div class="lang-dropdown">
+              <button class="lang-current" aria-haspopup="true" aria-expanded="false">
+                <img src="img/flags/cz-flag.svg" alt="cz flag" aria-hidden="true">
+                <span class="lang-text">CZ</span>
+                <span class="arrow"></span>
+              </button>
+              
+              <ul class="lang-list">
+                <li>
+                  <a href="?lang=cz" hreflang="cs" lang="cs">
+                    <img src="img/flags/cz-flag.svg" alt="cz flag" aria-hidden="true">
+                    <span class="lang-name">Čeština</span>
+                    <span class="sr-only">(Aktuální jazyk)</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=en" hreflang="en" lang="en">
+                    <img src="img/flags/uk-flag.svg" alt="" aria-hidden="true">
+                    <span class="lang-name">English</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=de" hreflang="de" lang="de">
+                    <img src="img/flags/de-flag.svg" alt="" aria-hidden="true">
+                    <span class="lang-name">Deutsch</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=sk" hreflang="sk" lang="sk">
+                    <img src="img/flags/sk-flag.svg" alt="sk flag" aria-hidden="true">
+                    <span class="lang-name">Slovenčina</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=ru" hreflang="ru" lang="ru">
+                    <img src="img/flags/ru-flag.svg" alt="ru flag" aria-hidden="true">
+                    <span class="lang-name">Ruština</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=ro" hreflang="ro" lang="ro">
+                    <img src="img/flags/ro-flag.svg" alt="ro flag" aria-hidden="true">
+                    <span class="lang-name">Rumunština</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="?lang=pl" hreflang="pl" lang="pl">
+                    <img src="img/flags/pl-flag.svg" alt="pl flag" aria-hidden="true">
+                    <span class="lang-name">Polština</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav> 
+    </header>
+ 
+ 
+    <main>
+      <section>
+        <div class="minihero">
+          <div class="content-wrapper">
+          <h1>GDPR</h1>
+          
+          </div>
+        </div>
+          <div class="content-wrapper">
+            <div class="f-row">
+              <article class="legal-section">
+              
+                      <h1>Ochrana osobních údajů</h1>
+                      <p>Pokud jste naším zákazníkem, odběratelem novinek nebo návštěvníkem webu, svěřujete nám své osobní údaje. My zodpovídáme za jejich ochranu a zabezpečení. Seznamte se, prosím, s ochranou osobních údajů, zásadami a právy, které máte v souvislosti s GDPR (Nařízení o ochraně osobních údajů).</p>
+              
+                      <h2>Kdo je správce?</h2>
+                      <p>Jsme společnost <strong>Losl s.r.o.</strong>, Dukelských hrdinů 2585, 269 01 Rakovník, zapsaná v obchodním rejstříku vedeném u Městského soudu v Praze, odd. C, vložka 49877, která provozuje webové stránky <a href="https://www.losl.cz" target="_blank" rel="noopener">www.losl.cz</a>. Vaše osobní údaje zpracováváme jako správce, tj. určujeme, jak budou osobní údaje zpracovávány a za jakým účelem, po jak dlouhou dobu a vybíráme případné další zpracovatele, kteří nám se zpracováním budou pomáhat.</p>
+              
+                      <h3>Kontaktní údaje</h3>
+                      <p>Pokud se na nás budete chtít v průběhu zpracování obrátit, můžete nás kontaktovat na tel. čísle <a href="tel:+420602106628">+420 602 106 628</a> nebo na e-mailu: <a href="mailto:truck@losl.cz">truck@losl.cz</a>.</p>
+              
+                      <h2>Prohlašujeme</h2>
+                      <p>Prohlašujeme, že jako správce vašich osobních údajů splňujeme veškeré zákonné povinnosti vyžadované platnou legislativou, zejména zákonem o ochraně osobních údajů a GDPR, a tedy že:</p>
+                      <ul>
+              <li>budeme zpracovávat vaše osobní údaje jen na základě platného právního důvodu, a to především oprávněného zájmu, plnění smlouvy, zákonné povinnosti či uděleného souhlasu,</li>
+              <li>plníme dle článku 13 GDPR informační povinnost ještě před zahájením zpracování osobních údajů,</li>
+              <li>umožníme vám a budeme vás podporovat v uplatňování a plnění vašich práv podle zákona o ochraně osobních údajů a GDPR.</li>
+                      </ul>
+              
+                      <h2>Rozsah osobních údajů a účely zpracování</h2>
+                      <p>Zpracováváme osobní údaje, které nám svěříte sami, a to z následujících důvodů (pro naplnění těchto účelů):</p>
+                      
+                      <h3>Poskytování služeb a plnění smlouvy</h3>
+                      <p>Vaše osobní údaje v rozsahu: fakturační údaje, e-mail, telefon, případně korespondenční adresu nezbytně potřebujeme k plnění smlouvy.</p>
+              
+                      <h3>Vedení účetnictví</h3>
+                      <p>Jste-li zákazníky, vaše osobní údaje (fakturační údaje) nezbytně potřebujeme, abychom vyhověli zákonné povinnosti pro vystavování a evidenci daňových dokladů.</p>
+              
+                      <h3>Marketing – zasílání newsletterů</h3>
+                      <p>Vaše osobní údaje (e-mail a jméno), pohlaví, na co klikáte v e-mailu a kdy je nejčastěji otevíráte, využíváme za účelem přímého marketingu – zasílání obchodních sdělení. Jste-li naším zákazníkem, děláme tak z oprávněného zájmu, neboť důvodně předpokládáme, že vás naše novinky zajímají, a to po dobu 10 let od poslední objednávky. Pokud nejste naším zákazníkem, zasíláme vám newslettery jen na základě vašeho souhlasu, po dobu 10 let od udělení. V obou případech můžete tento souhlas odvolat použitím odhlašovacího odkazu v každém zaslaném e-mailu.</p>
+              
+                      <h2>Cookies</h2>
+                      <p>Při procházení našich webových stránek zaznamenáváme vaši IP adresu, jak dlouho se na stránce zdržíte a ze které stránky přicházíte. Používání cookies pro měření návštěvnosti webu a přizpůsobení zobrazení webových stránek vnímáme jako svůj oprávněný zájem správce, neboť věříme, že díky tomu vám můžeme nabídnout ještě lepší služby.</p>
+                      <p>Cookies pro cílení reklamy budou zpracovávány jen na základě vašeho souhlasu.</p>
+                      <p>Naše webové stránky lze procházet také v režimu, který neumožňuje sbírání osobních údajů. Používání cookies můžete na svém počítači v internetovém prohlížeči zakázat.</p>
+              
+                      <h2>Zabezpečení a ochrana osobních údajů</h2>
+                      <p>Chráníme osobní údaje v maximální možné míře pomocí moderních technologií, které odpovídají stupni technického rozvoje. Přijali jsme a udržujeme veškerá možná (aktuálně známá) technická a organizační opatření, která zamezují zneužití, poškození nebo zničení vašich osobních údajů.</p>
+              
+                      <h2>Předání osobních údajů třetím osobám</h2>
+                      <p>K vašim osobním údajům mají přístup naši zaměstnanci a třetí strany, kteří jsou vázáni mlčenlivostí a proškoleni v oblasti bezpečnosti zpracování osobních údajů.</p>
+                      <p>Pro zajištění některých konkrétních zpracovatelských operací, které nedokážeme zajistit vlastními silami, využíváme služeb a aplikací zpracovatelů, kteří se na dané zpracování specializují a jsou v souladu s GDPR. Jsou to poskytovatelé následujících platforem a služeb:</p>
+                      <ul>
+              <li>SmartEmailing</li>
+              <li>Facebook – FB pixel</li>
+              <li>Google a Seznam – Google Analytics a Sklik</li>
+                      </ul>
+                      <p>Je možné, že se v budoucnu rozhodneme využít další aplikace či zpracovatele pro usnadnění a zkvalitnění zpracování. Slibujeme vám však, že v takovém případě budeme na zpracovatele klást minimálně stejné nároky na zabezpečení a kvalitu zpracování jako na sebe.</p>
+              
+                      <h2>Předávání dat mimo Evropskou unii</h2>
+                      <p>Data zpracováváme výhradně v Evropské unii nebo v zemích, které zajišťují odpovídající úroveň ochrany na základě rozhodnutí Evropské komise.</p>
+              
+                      <h2>Vaše práva v souvislosti s ochranou osobních údajů</h2>
+                      <p>V souvislosti s ochranou osobních údajů máte řadu práv. Pokud budete chtít některého z těchto práv využít, prosím, kontaktujte nás prostřednictvím e-mailu: <a href="mailto:truck@losl.cz">truck@losl.cz</a>.</p>
+                      <ul>
+              <li><strong>Právo na informace:</strong> Je plněno již touto informační stránkou se zásadami zpracování osobních údajů.</li>
+              <li><strong>Právo na přístup:</strong> Můžete nás kdykoli vyzvat a my vám doložíme ve lhůtě 30 dní, jaké vaše osobní údaje zpracováváme a proč.</li>
+              <li><strong>Právo na doplnění a změnu:</strong> Pokud se u vás něco změní nebo shledáte své osobní údaje neaktuální nebo neúplné, máte právo na jejich doplnění a změnu.</li>
+              <li><strong>Právo na omezení zpracování:</strong> Můžete využít, pokud se domníváte, že zpracováváme vaše nepřesné údaje, domníváte se, že provádíme zpracování nezákonně, ale nechcete všechny údaje smazat, nebo pokud jste vznesli námitku proti zpracování. Omezit můžete rozsah osobních údajů nebo účelů zpracování.</li>
+              <li><strong>Právo na výmaz (být zapomenut):</strong> Pokud si to budete přát, vymažeme veškeré vaše osobní údaje ze svého systému i ze systému všech dílčích zpracovatelů a záloh do 30 dní. V některých případech jsme však vázáni zákonnou povinností (např. evidencia daňových dokladů). V tomto případě smažeme všechny osobní údaje, které nejsou vázány jiným zákonem. O dokončení výmazu vás budeme informovat e-mailem.</li>
+                      </ul>
+              
+                      <h2>Stížnost u Úřadu pro ochranu osobních údajů</h2>
+                      <p>Pokud máte pocit, že s vašimi údaji nezacházíme v souladu se zákonem, máte právo se se svou stížností kdykoli obrátit na Úřad pro ochranu osobních údajů. Budeme moc rádi, pokud nejprve budete o tomto podezření informovat nás, abychom s tím mohli něco udělat a případné pochybení napravit.</p>
+              
+                      <h2>Odhlášení ze zasílání newsletterů a obchodních sdělení</h2>
+                      <p>E-maily s inspirací, články či produkty a službami vám zasíláme, jste-li náš zákazník, na základě našeho oprávněného zájmu. Pokud zákazníkem ještě nejste, posíláme vám je jen na základě vašeho souhlasu. V obou případech můžete ukončit odběr našich e-mailů stisknutím odhlašovacího odkazu v každém zaslaném e-mailu.</p>
+              
+                      <h2>Mlčenlivost</h2>
+                      <p>Dovolujeme si vás ujistit, že naši zaměstnanci i třetí strany, kteří budou zpracovávat vaše osobní údaje, jsou povinni zachovávat mlčenlivost o osobních údajích a o bezpečnostních opatřeních, jejichž zveřejnění by ohrozilo zabezpečení vašich osobních údajů. Tato mlčenlivost přitom trvá i po skončení závazkových vztahů s námi. Bez vašeho souhlasu nebudou vaše osobní údaje vydány žádné jiné třetí straně.</p>
+              </article>
+            </div>
+          </div>
+        
+      </section>
+
+
+  
+
+          <section class="section-newsletter">
+          <div class="content-wrapper">
+              <form class="newsletter-flex-container">
+                
+                <div class="newsletter-icon">
+<svg id="Group_144" data-name="Group 144" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="280.151" height="206.429" viewBox="0 0 280.151 206.429">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_77" data-name="Rectangle 77" width="280.151" height="206.429" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <path id="Path_138" data-name="Path 138" d="M98.407,21.423l-62.24,37.6V167.938H241.905V59.019l-62.469-37.6Z" transform="translate(-36.167 -21.423)" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-5">
+      <rect id="Rectangle_73" data-name="Rectangle 73" width="280.151" height="184.364" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_143" data-name="Group 143" clip-path="url(#clip-path)">
+    <g id="Group_142" data-name="Group 142">
+      <g id="Group_141" data-name="Group 141" clip-path="url(#clip-path)">
+        <path id="Path_137" data-name="Path 137" d="M241.905,168.581H36.167V59.661L131.575,2.03a14.092,14.092,0,0,1,14.551-.012l95.779,57.643Z" transform="translate(1.084 0)" fill="#a3a3a3"/>
+        <rect id="Rectangle_64" data-name="Rectangle 64" width="181.912" height="154.114" transform="translate(51.434 6.713)" fill="#fff"/>
+        <rect id="Rectangle_65" data-name="Rectangle 65" width="86.607" height="5.484" transform="translate(63.346 45.856)" fill="#c6c6c5"/>
+        <rect id="Rectangle_66" data-name="Rectangle 66" width="86.607" height="5.484" transform="translate(63.346 55.689)" fill="#c6c6c5"/>
+        <rect id="Rectangle_67" data-name="Rectangle 67" width="86.607" height="5.484" transform="translate(63.346 65.522)" fill="#c6c6c5"/>
+        <rect id="Rectangle_68" data-name="Rectangle 68" width="86.607" height="5.484" transform="translate(63.346 75.356)" fill="#c6c6c5"/>
+        <rect id="Rectangle_69" data-name="Rectangle 69" width="86.607" height="5.484" transform="translate(63.346 85.189)" fill="#c6c6c5"/>
+        <rect id="Rectangle_70" data-name="Rectangle 70" width="62.024" height="5.484" transform="translate(63.347 95.022)" fill="#c6c6c5"/>
+        <rect id="Rectangle_71" data-name="Rectangle 71" width="52.569" height="64.86" transform="translate(170.376 27.325)" fill="#a3a3a3"/>
+        <g id="Group_140" data-name="Group 140" style="mix-blend-mode: multiply;isolation: isolate">
+          <g id="Group_139" data-name="Group 139">
+            <g id="Group_138" data-name="Group 138" clip-path="url(#clip-path)">
+              <g id="Group_137" data-name="Group 137" transform="translate(37.251 22.065)">
+                <g id="Group_136" data-name="Group 136" clip-path="url(#clip-path-4)">
+                  <g id="Group_135" data-name="Group 135" transform="translate(-37.251)">
+                    <g id="Group_134" data-name="Group 134" clip-path="url(#clip-path-5)">
+                      <image id="Rectangle_72" data-name="Rectangle 72" width="280.151" height="184.364" xlink:href="data:image/png;base64,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"/>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <path id="Path_139" data-name="Path 139" d="M241.905,166.845H36.167V57.925l99.883,55.184a5.793,5.793,0,0,0,5.6,0L241.905,57.925Z" transform="translate(1.084 1.736)" fill="#d2d1d1"/>
+        <path id="Path_140" data-name="Path 140" d="M36.168,165.56l96.641-62.888a11.408,11.408,0,0,1,12.452.005l95.888,62.5Z" transform="translate(1.084 3.022)" fill="#dfdfdf"/>
+        <rect id="Rectangle_75" data-name="Rectangle 75" width="86.607" height="11.535" transform="translate(63.346 27.325)" fill="#a3a3a3"/>
+      </g>
+    </g>
+  </g>
+</svg>
+
+                </div>
+
+                <div class="newsletter-center">
+                  <div class="newsletter-text">
+                    <h2>Přidejte se na náš seznam e-mailové rozesílky</h2>
+                    <p>Zadejte Vaší e-mailovou adresu a již Vám nikdy neuniknou speciální nabídky a akce od naší společnosti.</p>
+                  </div>
+                  
+                  <div class="input-group">
+                    <label for="email-field">Váš e-mail:</label>
+                    <input type="email" id="email-field" placeholder="@ Váš e-mail:" required>
+                  </div>
+                </div>
+
+                <div class="newsletter-actions">
+                  <button type="submit" class="btn-subscribe-arrow">
+                    odeslat
+                  </button>
+                </div>
+
+              </form>
+            </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="content-wrapper">
+      <div class="footer-top">
+        <ul class="footer-nav">
+          <li><a href="o-firme.html" aria-current="page">O firmě</a></li>
+          <li><a href="nabidka-vozu.html">Nabídka vozidel</a></li>
+          <li><a href="navesy-kogel.html">Nové návěsy</a></li>
+          <li><a href="prodej-vozu.html">Prodej vozů</a></li>
+          <li><a href="vykup-vozu.html">Výkup vozů</a></li>
+          <li><a href="dovoz.html">Dovoz</a></li>
+          <li><a href="financovani-vozu.html">Financování</a></li>
+          <li><a href="https://www.czechfinance.cz/" target="blank">Pronájem</a></li>
+          <li><a href="servis-vozu.html">Servis</a></li>
+	        <li><a href="kontakty.html">Kontakty</a></li>
+          <li><a href="dovoz.html">Dovoz</a></li>
+      </ul>
+
+      </div>
+
+      <div class="footer-mid f-row">
+        <div class="f-5"><a href="index.html" target="_self" alt="back to home"><img src="img/logo-losl.svg" alt="LOSL Logo" fetchpriority="high" ></a></div>
+        <div class="f-60"><p>Tak to jsme my – LOSL s.r.o. Profesionální bazar nákladních aut a užitkových vozů. Na trhu nás najdete od roku 1997, na prodej ojetých nákladních aut se specializujeme od roku 1999. Každý den máme pro Vás připraveno cca 300 prověřených nákladních vozů. Rádi Vás přivítáme osobně přímo v našem autobazaru v Novém Strašecí, jen asi 40 kilometrů od Prahy.</p></div>
+        <div class="f-p"><p><a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></p>
+              <p><a href="cookies.html">Nastavení cookies</a></p>
+              <p><a href="vseobecne-obchodni-podminky.html">Všeobecné obchodní podmínky</a></p></div>
+      </div>
+    
+    <div class="partneri f-row">
+      <div class="f-5"><h2>Partneři</h2></div>
+      <div class="f-5"><svg id="Group_165" data-name="Group 165" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="209.428" height="65.116" viewBox="0 0 209.428 65.116">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_82" data-name="Rectangle 82" width="209.428" height="65.116" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_164" data-name="Group 164" clip-path="url(#clip-path)">
+    <path id="Path_141" data-name="Path 141" d="M11.433,203.352,9.8,203.073c-.82-.14-1.089-.466-1.089-.876,0-.782.819-1.089,1.546-1.089,1.592,0,1.89.707,1.974,1.229h.987c-.093-1.6-1.5-2.086-2.831-2.086-1.7,0-2.663.811-2.663,2.021,0,1.294,1.183,1.611,1.974,1.741l1.508.252c.764.13,1.239.381,1.239.987,0,.726-.745,1.126-1.8,1.126-1.006,0-2.124-.307-2.142-1.5H7.522c0,1.834,1.555,2.355,3.054,2.355,1.341,0,2.859-.484,2.859-2.179,0-1.359-1.481-1.611-2-1.7" transform="translate(-5.338 -142.119)" fill="#161615"/>
+    <path id="Path_142" data-name="Path 142" d="M38.558,206.342l-2.635-5.513H34.536v6.649h.987v-5.4h.019l2.579,5.4H39l2.589-5.513H41.6v5.513h.987v-6.649H41.222Z" transform="translate(-24.51 -142.528)" fill="#161615"/>
+    <path id="Path_143" data-name="Path 143" d="M70.987,200.827l-3.008,6.65h1.062l.847-1.937h3.259l.848,1.937h1.127l-3.007-6.65Zm-.727,3.856,1.248-2.942,1.276,2.942Z" transform="translate(-48.245 -142.528)" fill="#161615"/>
+    <path id="Path_144" data-name="Path 144" d="M103.127,204.255v-.019a1.589,1.589,0,0,0,1.117-1.638,1.672,1.672,0,0,0-1.816-1.77H98.312v6.649H99.3v-2.821h2.579c.82,0,1.22.363,1.286,1.555.046.8.046,1.081.2,1.267h1.043c-.224-.261-.26-.568-.316-1.807-.037-.782-.382-1.332-.968-1.416m-1.071-.456H99.3v-2.114h2.784c.792,0,1.174.428,1.174,1.062,0,.465-.233,1.052-1.2,1.052" transform="translate(-69.772 -142.528)" fill="#161615"/>
+    <path id="Path_145" data-name="Path 145" d="M123.655,201.685h2.514v5.792h.987v-5.792h2.514v-.857h-6.016Z" transform="translate(-87.759 -142.528)" fill="#161615"/>
+    <path id="Path_146" data-name="Path 146" d="M166.248,201.108a2.07,2.07,0,0,1,2.272,1.7h.987c-.168-1.993-2-2.561-3.334-2.561a3.492,3.492,0,0,0,.01,6.984,3.146,3.146,0,0,0,3.324-2.71h-.987a2.18,2.18,0,0,1-2.328,1.853,2.356,2.356,0,0,1-2.515-2.551,2.4,2.4,0,0,1,2.571-2.719" transform="translate(-115.462 -142.119)" fill="#161615"/>
+    <path id="Path_147" data-name="Path 147" d="M198.75,203.492h-4.525v-2.663h-.987v6.649h.987v-3.129h4.525v3.129h.987v-6.649h-.987Z" transform="translate(-137.141 -142.528)" fill="#161615"/>
+    <path id="Path_148" data-name="Path 148" d="M226.344,200.251a3.5,3.5,0,1,0,3.7,3.492,3.357,3.357,0,0,0-3.7-3.492m0,6.127a2.636,2.636,0,1,1,2.71-2.635,2.487,2.487,0,0,1-2.71,2.635" transform="translate(-158.013 -142.119)" fill="#161615"/>
+    <rect id="Rectangle_81" data-name="Rectangle 81" width="0.987" height="6.649" transform="translate(74.103 58.3)" fill="#161615"/>
+    <path id="Path_149" data-name="Path 149" d="M269.376,201.108a2.07,2.07,0,0,1,2.272,1.7h.987c-.168-1.993-2-2.561-3.334-2.561a3.492,3.492,0,0,0,.009,6.984,3.146,3.146,0,0,0,3.325-2.71h-.987a2.179,2.179,0,0,1-2.328,1.853,2.356,2.356,0,0,1-2.514-2.551,2.4,2.4,0,0,1,2.57-2.719" transform="translate(-188.652 -142.119)" fill="#161615"/>
+    <path id="Path_150" data-name="Path 150" d="M297.353,204.469h4.228v-.857h-4.228v-1.928h4.358v-.857h-5.345v6.649H301.8v-.857h-4.452Z" transform="translate(-210.332 -142.528)" fill="#161615"/>
+    <path id="Path_151" data-name="Path 151" d="M336.011,207.477H337v-2.971h3.967v-.856H337v-1.965h4.163v-.857h-5.15Z" transform="translate(-238.468 -142.528)" fill="#161615"/>
+    <path id="Path_152" data-name="Path 152" d="M362.488,200.251a3.5,3.5,0,1,0,3.7,3.492,3.357,3.357,0,0,0-3.7-3.492m0,6.127a2.636,2.636,0,1,1,2.71-2.635,2.487,2.487,0,0,1-2.71,2.635" transform="translate(-254.635 -142.119)" fill="#161615"/>
+    <path id="Path_153" data-name="Path 153" d="M396.16,204.255v-.019a1.59,1.59,0,0,0,1.117-1.638,1.672,1.672,0,0,0-1.816-1.77h-4.116v6.649h.987v-2.821h2.579c.82,0,1.22.363,1.286,1.555.046.8.046,1.081.2,1.267h1.042c-.223-.261-.26-.568-.316-1.807-.037-.782-.381-1.332-.968-1.416m-1.071-.456h-2.756v-2.114h2.784c.792,0,1.173.428,1.173,1.062,0,.465-.233,1.052-1.2,1.052" transform="translate(-277.74 -142.528)" fill="#161615"/>
+    <path id="Path_154" data-name="Path 154" d="M433.388,203.855l-2.17-3.027h-1.257l2.915,3.912v2.738h.987v-2.784l2.933-3.866h-1.2Z" transform="translate(-305.145 -142.528)" fill="#161615"/>
+    <path id="Path_155" data-name="Path 155" d="M459.8,200.251a3.5,3.5,0,1,0,3.7,3.492,3.357,3.357,0,0,0-3.7-3.492m0,6.127a2.636,2.636,0,1,1,2.71-2.635,2.487,2.487,0,0,1-2.71,2.635" transform="translate(-323.695 -142.119)" fill="#161615"/>
+    <path id="Path_156" data-name="Path 156" d="M493.457,205.084c0,1.2-.8,1.7-2.021,1.7s-2.02-.5-2.02-1.7v-4.256h-.987v4.135c0,1.778.987,2.681,3.008,2.681s3.008-.9,3.008-2.681v-4.135h-.987Z" transform="translate(-346.639 -142.528)" fill="#161615"/>
+    <path id="Path_157" data-name="Path 157" d="M522.167,204.255v-.019a1.59,1.59,0,0,0,1.117-1.638,1.672,1.672,0,0,0-1.816-1.77h-4.116v6.649h.987v-2.821h2.579c.82,0,1.22.363,1.285,1.555.046.8.046,1.081.2,1.267h1.043c-.224-.261-.261-.568-.317-1.807-.037-.782-.381-1.332-.968-1.416M521.1,203.8H518.34v-2.114h2.784c.792,0,1.173.428,1.173,1.062,0,.465-.233,1.052-1.2,1.052" transform="translate(-367.167 -142.528)" fill="#161615"/>
+    <path id="Path_158" data-name="Path 158" d="M556.192,201.685h2.515v5.792h.987v-5.792h2.514v-.857h-6.016Z" transform="translate(-394.731 -142.528)" fill="#161615"/>
+    <path id="Path_159" data-name="Path 159" d="M587.535,204.255v-.019a1.59,1.59,0,0,0,1.117-1.638,1.672,1.672,0,0,0-1.815-1.77h-4.116v6.649h.987v-2.821h2.579c.82,0,1.22.363,1.285,1.555.046.8.046,1.081.2,1.267h1.042c-.223-.261-.26-.568-.316-1.807-.037-.782-.381-1.332-.968-1.416m-1.071-.456h-2.756v-2.114h2.784c.792,0,1.173.428,1.173,1.062,0,.465-.233,1.052-1.2,1.052" transform="translate(-413.559 -142.528)" fill="#161615"/>
+    <path id="Path_160" data-name="Path 160" d="M615.307,205.084c0,1.2-.8,1.7-2.021,1.7s-2.02-.5-2.02-1.7v-4.256h-.987v4.135c0,1.778.987,2.681,3.007,2.681s3.008-.9,3.008-2.681v-4.135h-.987Z" transform="translate(-433.116 -142.528)" fill="#161615"/>
+    <path id="Path_161" data-name="Path 161" d="M641.415,201.108a2.07,2.07,0,0,1,2.272,1.7h.987c-.167-1.993-2-2.561-3.333-2.561a3.492,3.492,0,0,0,.009,6.984,3.146,3.146,0,0,0,3.324-2.71h-.987a2.18,2.18,0,0,1-2.328,1.853,2.356,2.356,0,0,1-2.515-2.551,2.4,2.4,0,0,1,2.57-2.719" transform="translate(-452.69 -142.119)" fill="#161615"/>
+    <path id="Path_162" data-name="Path 162" d="M674.576,200.828h-1.4l-3.716,3.343v-3.343h-.987v6.649h.987v-2.17l1.211-1.071,2.719,3.241h1.359l-3.334-3.892Z" transform="translate(-474.42 -142.528)" fill="#161615"/>
+    <path id="Path_163" data-name="Path 163" d="M697.179,203.352l-1.63-.279c-.82-.14-1.09-.466-1.09-.876,0-.782.82-1.089,1.546-1.089,1.593,0,1.89.707,1.975,1.229h.987c-.094-1.6-1.5-2.086-2.831-2.086-1.7,0-2.664.811-2.664,2.021,0,1.294,1.183,1.611,1.974,1.741l1.509.252c.763.13,1.238.381,1.238.987,0,.726-.745,1.126-1.8,1.126-1,0-2.123-.307-2.142-1.5h-.987c0,1.834,1.555,2.355,3.055,2.355,1.341,0,2.859-.484,2.859-2.179,0-1.359-1.481-1.611-2-1.7" transform="translate(-492.014 -142.119)" fill="#161615"/>
+    <path id="Path_164" data-name="Path 164" d="M13.029,135.06a5.069,5.069,0,0,1-4.93,3.279c-3.818,0-3.993-2.988-3.565-5s1.872-5,5.691-5c2.1,0,3.635,1.058,3.554,3.2h4.337c.483-5.105-3.867-6.018-7.437-6.018-5.4,0-9.251,2.324-10.42,7.824s1.7,7.823,7.095,7.823c4.71,0,8.638-1.785,10.054-6.1Z" transform="translate(0 -89.078)" fill="#00214e"/>
+    <path id="Path_165" data-name="Path 165" d="M76.117,129.518l.547-2.573H62.241l-.6,2.822h9.131l-11.8,9.422-.547,2.573H73.514l.6-2.822H64.319Z" transform="translate(-41.466 -90.093)" fill="#00214e"/>
+    <path id="Path_166" data-name="Path 166" d="M134,129.767l.6-2.822H120.763l-3.149,14.817h13.925l.6-2.823h-9.9l.723-3.4h9.318l.573-2.7h-9.318l.653-3.071Z" transform="translate(-83.471 -90.093)" fill="#00214e"/>
+    <path id="Path_167" data-name="Path 167" d="M186.531,125.514c-5.4,0-9.251,2.324-10.42,7.824s1.7,7.823,7.095,7.823c4.711,0,8.639-1.785,10.054-6.1h-4.379a5.07,5.07,0,0,1-4.93,3.279c-3.819,0-3.993-2.988-3.565-5s1.872-5,5.691-5c2.1,0,3.635,1.058,3.554,3.2h4.337c.483-5.1-3.867-6.018-7.437-6.018" transform="translate(-124.803 -89.078)" fill="#00214e"/>
+    <path id="Path_168" data-name="Path 168" d="M253.748,132.506h-8.342l1.182-5.562h-4.026l-3.149,14.817h4.026l1.367-6.433h8.342l-1.367,6.433h4.026l3.149-14.817H254.93Z" transform="translate(-169.912 -90.093)" fill="#00214e"/>
+    <path id="Path_169" data-name="Path 169" d="M341.486,129.767H350.7l.6-2.822H338.06l-3.149,14.817h4.026l1.261-5.935h8.633l.6-2.822H340.8Z" transform="translate(-237.687 -90.093)" fill="#00214e"/>
+    <path id="Path_170" data-name="Path 170" d="M390.533,126.944l-3.149,14.817h4.026l3.149-14.817Z" transform="translate(-274.927 -90.093)" fill="#00214e"/>
+    <path id="Path_171" data-name="Path 171" d="M427.607,126.944l-2.2,10.335h-.042l-5.586-10.335h-4.669l-3.149,14.817h3.9l2.2-10.335h.042l5.876,10.335h4.379l3.149-14.817Z" transform="translate(-292.373 -90.093)" fill="#00214e"/>
+    <path id="Path_172" data-name="Path 172" d="M480.582,126.944l-9.665,14.817h4.337l1.852-3.05h6.807l.555,3.05h4.337l-3.367-14.817Zm-1.824,9.069,3.572-5.873,1.076,5.873Z" transform="translate(-334.211 -90.093)" fill="#00214e"/>
+    <path id="Path_173" data-name="Path 173" d="M551.014,126.944l-2.2,10.335h-.041l-5.586-10.335h-4.669l-3.149,14.817h3.9l2.2-10.335h.042l5.876,10.335h4.379l3.149-14.817Z" transform="translate(-379.955 -90.093)" fill="#00214e"/>
+    <path id="Path_174" data-name="Path 174" d="M610.393,138.339c-3.818,0-3.992-2.988-3.565-5s1.872-5,5.691-5c2.1,0,3.635,1.058,3.554,3.2h4.337c.483-5.105-3.868-6.018-7.437-6.018-5.4,0-9.251,2.324-10.42,7.824s1.7,7.823,7.095,7.823c4.711,0,8.639-1.785,10.054-6.1h-4.379a5.069,5.069,0,0,1-4.93,3.279" transform="translate(-427.45 -89.078)" fill="#00214e"/>
+    <path id="Path_175" data-name="Path 175" d="M679.289,129.767l.6-2.822H666.047L662.9,141.762h13.925l.6-2.823h-9.9l.723-3.4h9.318l.573-2.7H668.82l.653-3.071Z" transform="translate(-470.461 -90.093)" fill="#00214e"/>
+    <path id="Path_176" data-name="Path 176" d="M381.691,8.176c.1,0,.157-.094.111-.233a1.282,1.282,0,0,0-.432-.617c-5.636-5.048-92.7-.14-121.315,1.477-3.875.218-7.052.38-7.486.4a.053.053,0,0,0-.051.055l.025.389a.054.054,0,0,0,.055.055c5.584-.122,36.381-.439,66.179-.742,62.733-.638,62.853-.788,62.914-.786" transform="translate(-179.214 -3.623)" fill="#008bd2"/>
+    <path id="Path_177" data-name="Path 177" d="M386.445,65.541a1.282,1.282,0,0,0-.432-.617c-5.636-5.048-92.7-.14-121.315,1.477-3.875.219-8.415.45-8.849.472a.053.053,0,0,0-.051.055l.021.391a.054.054,0,0,0,.055.055c5.585-.122,37.747-.511,67.545-.814,62.733-.638,62.853-.788,62.914-.786.1,0,.157-.094.111-.233" transform="translate(-181.541 -44.5)" fill="#008bd2"/>
+    <path id="Path_178" data-name="Path 178" d="M383.6,36.975c.1,0,.157-.094.111-.233a1.283,1.283,0,0,0-.432-.617c-5.636-5.048-92.7-.14-121.314,1.477-3.875.219-7.324.381-7.758.4a.054.054,0,0,0-.051.055l.023.392a.054.054,0,0,0,.054.055c5.584-.122,36.654-.443,66.453-.746,62.733-.638,62.853-.788,62.914-.786" transform="translate(-180.372 -24.061)" fill="#008bd2"/>
+    <path id="Path_179" data-name="Path 179" d="M74.677.007A162.685,162.685,0,0,0,36.1,11.73C30.7,14.1,18.494,19.637,13.268,26.563c-.44.583.3,1.339.829.846,11.128-10.442,41.485-19.99,56.342-22.7a.585.585,0,0,1,.655.5c1.269,6.136,3.5,15.7,4.538,21.888a.572.572,0,0,0,1.139-.11L75.34.623a.6.6,0,0,0-.663-.616" transform="translate(-9.322 0)" fill="#008bd2"/>
+  </g>
+</svg>
+<p>Czech Finance</p>
+</div>
+      <div class="f-5"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="227" height="67" viewBox="0 0 227 67">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 300 89">
+      <image width="300" height="89" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAABZCAYAAACE5RmzAAAACXBIWXMAAAsTAAALEwEAmpwYAABH0mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS41LWMwMjEgNzkuMTU0OTExLCAyMDEzLzEwLzI5LTExOjQ3OjE2ICAgICAgICAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgICAgICAgICB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIgogICAgICAgICAgICB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIj4KICAgICAgICAgPHhtcDpDcmVhdG9yVG9vbD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC94bXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4bXA6Q3JlYXRlRGF0ZT4yMDE5LTA1LTI3VDEzOjQ1OjI0KzAyOjAwPC94bXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhtcDpNZXRhZGF0YURhdGU+MjAxOS0wNS0yN1QxMzo0NToyNCswMjowMDwveG1wOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPHhtcDpNb2RpZnlEYXRlPjIwMTktMDUtMjdUMTM6NDU6MjQrMDI6MDA8L3htcDpNb2RpZnlEYXRlPgogICAgICAgICA8eG1wTU06SW5zdGFuY2VJRD54bXAuaWlkOmEwNDQ3ZmEyLWQ5NjQtYmM0OC04NGM0LWQ4ODBjYmE0MGVjZjwveG1wTU06SW5zdGFuY2VJRD4KICAgICAgICAgPHhtcE1NOkRvY3VtZW50SUQ+eG1wLmRpZDoxODFlMTMwOC0wNzgzLWNiNDMtODZmNi1lZTgzNTcxYTA2ZTI8L3htcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ+eG1wLmRpZDoxODFlMTMwOC0wNzgzLWNiNDMtODZmNi1lZTgzNTcxYTA2ZTI8L3htcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHhtcE1NOkhpc3Rvcnk+CiAgICAgICAgICAgIDxyZGY6U2VxPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0OmFjdGlvbj5jcmVhdGVkPC9zdEV2dDphY3Rpb24+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDppbnN0YW5jZUlEPnhtcC5paWQ6MTgxZTEzMDgtMDc4My1jYjQzLTg2ZjYtZWU4MzU3MWEwNmUyPC9zdEV2dDppbnN0YW5jZUlEPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6d2hlbj4yMDE5LTA1LTI3VDEzOjQ1OjI0KzAyOjAwPC9zdEV2dDp3aGVuPgogICAgICAgICAgICAgICAgICA8c3RFdnQ6c29mdHdhcmVBZ2VudD5BZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpPC9zdEV2dDpzb2Z0d2FyZUFnZW50PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDphY3Rpb24+c2F2ZWQ8L3N0RXZ0OmFjdGlvbj4KICAgICAgICAgICAgICAgICAgPHN0RXZ0Omluc3RhbmNlSUQ+eG1wLmlpZDphMDQ0N2ZhMi1kOTY0LWJjNDgtODRjNC1kODgwY2JhNDBlY2Y8L3N0RXZ0Omluc3RhbmNlSUQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDp3aGVuPjIwMTktMDUtMjdUMTM6NDU6MjQrMDI6MDA8L3N0RXZ0OndoZW4+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpzb2Z0d2FyZUFnZW50PkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cyk8L3N0RXZ0OnNvZnR3YXJlQWdlbnQ+CiAgICAgICAgICAgICAgICAgIDxzdEV2dDpjaGFuZ2VkPi88L3N0RXZ0OmNoYW5nZWQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpTZXE+CiAgICAgICAgIDwveG1wTU06SGlzdG9yeT4KICAgICAgICAgPHBob3Rvc2hvcDpUZXh0TGF5ZXJzPgogICAgICAgICAgICA8cmRmOkJhZz4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPk9TT0JOw408L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0Pk9TT0JOw408L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+RE9Ew4FWS1k8L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0PkRPRMOBVktZPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPk7DgUtMQUROw408L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0Pk7DgUtMQUROw408L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+T1NUQVROw408L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0Pk9TVEFUTsONPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPldpc2hsaXN0ICgwKTwvcGhvdG9zaG9wOkxheWVyTmFtZT4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllclRleHQ+V2lzaGxpc3QgKDApPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPllvdXIgQWNjb3VudDwvcGhvdG9zaG9wOkxheWVyTmFtZT4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllclRleHQ+WW91ciBBY2NvdW50PC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPsSMZXNreTwvcGhvdG9zaG9wOkxheWVyTmFtZT4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllclRleHQ+xIxlc2t5PC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPkhlbHA8L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0PkhlbHA8L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+TyBmaXJtxJs8L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0Pk8gZmlybcSbPC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPlDFr2rEjW92bmE8L3Bob3Rvc2hvcDpMYXllck5hbWU+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJUZXh0PlDFr2rEjW92bmE8L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+UHJvZGVqPC9waG90b3Nob3A6TGF5ZXJOYW1lPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyVGV4dD5Qcm9kZWo8L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+VsO9a3VwPC9waG90b3Nob3A6TGF5ZXJOYW1lPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyVGV4dD5Ww71rdXA8L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllck5hbWU+QWtjZTwvcGhvdG9zaG9wOkxheWVyTmFtZT4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllclRleHQ+QWtjZTwvcGhvdG9zaG9wOkxheWVyVGV4dD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyTmFtZT5Lb250YWt0PC9waG90b3Nob3A6TGF5ZXJOYW1lPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyVGV4dD5Lb250YWt0PC9waG90b3Nob3A6TGF5ZXJUZXh0PgogICAgICAgICAgICAgICA8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgICAgICAgIDxwaG90b3Nob3A6TGF5ZXJOYW1lPlNob3BwaW5nIENhcnQgKDApPC9waG90b3Nob3A6TGF5ZXJOYW1lPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyVGV4dD5TaG9wcGluZyBDYXJ0ICgwKTwvcGhvdG9zaG9wOkxheWVyVGV4dD4KICAgICAgICAgICAgICAgPC9yZGY6bGk+CiAgICAgICAgICAgICAgIDxyZGY6bGkgcmRmOnBhcnNlVHlwZT0iUmVzb3VyY2UiPgogICAgICAgICAgICAgICAgICA8cGhvdG9zaG9wOkxheWVyTmFtZT5Gb2xsb3cgVXMgZm9yIG1vcmUgb2YgdGhpcy4uLjwvcGhvdG9zaG9wOkxheWVyTmFtZT4KICAgICAgICAgICAgICAgICAgPHBob3Rvc2hvcDpMYXllclRleHQ+Rm9sbG93IFVzIGZvciBtb3JlIG9mIHRoaXMuLi48L3Bob3Rvc2hvcDpMYXllclRleHQ+CiAgICAgICAgICAgICAgIDwvcmRmOmxpPgogICAgICAgICAgICA8L3JkZjpCYWc+CiAgICAgICAgIDwvcGhvdG9zaG9wOlRleHRMYXllcnM+CiAgICAgICAgIDxwaG90b3Nob3A6Q29sb3JNb2RlPjM8L3Bob3Rvc2hvcDpDb2xvck1vZGU+CiAgICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2UvcG5nPC9kYzpmb3JtYXQ+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyMDAwMC8xMDAwMDwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6WVJlc29sdXRpb24+NzIwMDAwLzEwMDAwPC90aWZmOllSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpSZXNvbHV0aW9uVW5pdD4yPC90aWZmOlJlc29sdXRpb25Vbml0PgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjY1NTM1PC9leGlmOkNvbG9yU3BhY2U+CiAgICAgICAgIDxleGlmOlBpeGVsWERpbWVuc2lvbj4zMDA8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpQaXhlbFlEaW1lbnNpb24+ODk8L2V4aWY6UGl4ZWxZRGltZW5zaW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/PoCD6PEAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAFWxJREFUeNrsnXmcFNW1x78gCAgIXQgiTcUNAREIrhFwy1NEn6JoXMH4XJ6JL0+NS54a/ZRtrJD4SWJMfBI1z7hEcV9Qcce4K6gBaUVBI4plK5sFo7KICO+Pe1qKnrrV3TM9M90z5/v51Gd6qqurb9/lV/eee+657TZs2ICiKEot0F6zQFEUFSxFURQVLEVRVLAURVFUsBRFUVSwFEVRwVIURVHBUhRFaRQdyrm4Xbt2mmNKg1j+q+HtABdIA98D+svrNJACukeOHkBnoFOR234LfCWvVwNrgDpglfz/JbAcCGP+fgosTmWyS7R0Wp5SHdjblePproKllChOWwF7AEOA4cAuwM5A1ypM7jpgMfAx8FHkWAC8BwSpTFaXg6hgKa1IoHYC9gFGy99BrejnrQLmA/OAucAc4M1UJvuJlrwKllIbAtUdOBA4HDhEhnWNoU6GdtFjRcE1X8swrxPQpeC9rkBHoKeYObrJNVvK0LIpCIHZwOvATGBmKpP9TGuHCpZSHSK1I3AU8O/Si+pYxscXSu9kvgy1FgKfAIuApalMdl0TpruTCFlPjK0sBfQFtpajL9AHY1PbluJ2syQ+AV4GngNeAubqcFIFS2k+kRoqInUMxhZVCl8AL0qDfQ34ZyqTrauh39xHhGtHGdoOAAbTMBvcMuB5YDrwVCqTXaC1SgVLqWyDHQRMAI6nNFtUXqCek2N2KpP9thXmS3tgOxHu4ZhJhd2BfmXc5gPgSeAx4JlUJrtGa5wKllJ+Y+wnAjVBGmIx3gUelePlVCb7TRvOu77AXpgJh9GSf6UMK1cBTwMPAY+2dfcKFSylWEPrBIwHTgXGkOxEvA74B/AIMC2VyX6kOWjN181FwA4CDgD2LkHA1kvv9F7ggbYoXipYiq1B7SYiNRFjgE4SqWekET2YymRDzb0G5XcXzIzqYXK4JYrXA5Lvn6pgqWC1tUbTHTgROBPYNaneSGOZoiLVZGUxLCJeo4r0bDdgJi/uaO09LxUsheW/Gr478FMRq24Jl74P3ArclspkP9aca7bycTC+bBOkF9ahSM9rOnCPiNdyFSwVrNbQCDYHjgXOBn6QcOlXwJ3AzalM9lXNuRYvt15SbicA+wFJjW0t8BRwNzA1lcl+pYKlglVrFX4bGfKdiXGEtJEFbpDe1Jeac1VZlttibIw/xviAJbEGM1t7J/BYKpNdrYKlglXNlXsQcKFU7o4JT+S7getTmewrmms1Vb57AifJsL53kcu/AB7G2CCfqSV3ExWs1l+R9wAuBo5OGD4sA64DJqcy2cWaazVd3h2Bg4GTgSMovkbyc+A+6Xm9mMpk16tgKS1RcXcDfgOMTbjsXeBq4PZaHSIoiXWgB2a51I8pbu8C+EyE6+5UJvuaCpbSHJV0ADAJOC7hslfkmsd10W2bqRd5e9dETPyxYizAuEnclcpk56pgtY1K0g3jJtAZEwWgPSaUyWaYiJlR8qFPCsmHQVnHxqiZNvYG/lPuH8dTwG9TmexzWjptul4Ox7hITKC4gyrA2yJe96Qy2Q9UsKq/gDthZtS2kb/9MIZNB+glf/NHNHxvtfAQMCmVyb6uzVWJ1Ot2mBBAE2Xo2KuEj81k46qGZo8qoYK1caw/QI7t5KnjYmKKuyUWZDXyBHBJKpOdrc1TKdIGOmKcUo/FhApKlfCxWcBU4N5UJjtPBauyBdIeE7toFzkGAzvJ4bSy+vesCNUMbYpKI8VrfIntY5705J/CROb4WgWr9AzvCowAdsOsiRshAtWljNusxkS6XIEJzVtX8Dr6f96+tA7joLeGTW1OdZj1XqXQnU1tUD0jr/Nhf/N2rXaRoeeWGBvZ7FQm+7w2O6VCbWkzTDSJYzGuMb1LbDvPYZYITcdEVK1I7LOaFyzpOQ2WsfgoYE/5P2mxaA74EAjk+ASznVMOWAIsSmWyq7S6Kkq9trY3Zl3jOGBoiR9dKcPHmcAbmDDYCxrSxmpOsETx95Au6z7AyIJeSJ5FbNzFZB5mK6YPgI+aqruqKG1MwLaNiNcPgc3LvMVnmK3SlmG87+uAb9g4Y54CtpKjF7BFz8vmbFH1giXLSsawMdhZdAZuHfAWZlul/JFNZbKfa5VSlGY1w4wBDpV2ukMTfM2CnpfN2bHqBEuMfvtilhaMK/jxCzE7jszEbJ30pnppK0rVCdj2IlwHSlvuV4Hbntnzsjk3VIVgScTFwzD+IIdEelEL2bhxwXMadldRalLAdhThGoWxgw3B7uAcx+RUJntWi9qwxCHzYExsnyNl7LoaM7MwDbPlkQqUorTOIeQIjD16qBy7UH8FyBrAS2Wyf4AWMrpLKIzTMevdUsDHmFg904BndYinKG1WyPpjHLb7iFjNSGWyK/LvN5tgSaTEk0SohmFmCO7CrAyfqUWlKEoxmlywpDd1jvSmVmJiTd8NPF/tsXcURalNwepQZreuA8Yr9lyMgW06JibP1FQmu1azXVGUpqRDmdfPxrjw3wSc1BKruhVFUcEqlROB+W15a3JFUVoODeCnKEqLU6oOtdesUhSlVlDBUhRFBUtRFEUFS1GUNksHzQJFaX24bvpuYFDMW5cFQe5hFawYQo/NMBEJk3aaudTxmaJVTGmmhtyJjRuR9MMEkGsvdTS/TVsd8CWwFBOH7d0gyNVacMhBwPdjztf0PgdN3cMaCQwvcs0JUN2CFXps5vh8q829VeT/k8D+ZX5mjeumHweuCYLcc1oirVewjizhmoNCj26OX3Qz0eZqHF0w8eNHyTESE3HxTa0uzSNOmHAkoyXvRwHXAn9qwWR1xmyRdZTrpu8CTg+CnO4N0EYFqzMwFri/ChrLI5ggg2rba5n8vxS4iPqxk6qJEwDXddMH1uAwseZp34SVb2fM3oBR1hO/Ldb4KsmPYSpWLcpOVS5WeUYDV2hxtSLBwsRtLySLMWIWcljo0VGLQ2lB/oiJjrk9ZqfwQ4Fbse87eZ7rpvtotrWeIWHccPAlTLTBEQXnU8B+wDNaJEoL8VYQ5OZG/v8AeMJ101OBBzCb20bpiIkFd61mXY0LVuixNSZeViEvA8uBX1iGhc8Uue/llreud3wWxVx/iCUd8xyfu+SaAzBbjEH8PogAZ4beJvef4fg8kZDObYAfiQgPlvu2l98+T37nfY7PsiK/d3yMuL+fdwMJPdLA+RgbYA/gTsfnwoT77YsxHu+BmdbviNnF+l3gafl8mPD5uPxc7PhcJ+93A07G7Gk3ELOj9WLgFeBvjl+/dx16bAecIv+OsHz1IaG3Sdkscnyub44GEgS5qa6bfhATB66Qvcq5l+umu2L2+dsG+CwIctMs13XHTDxsLQ/zzTFuFh8A2SDIranEbxMXj5HAjpht9RYCrwRBbm2Z9+kuvdN8ejtG0junkra+puphjYt5IoHZIecLzKaKHWN6ZGcXuW/Gcn4q1BcsjAH95zHnH8KEcUbEKlPke39a8P+fob5ghR69gSul0cblbVoK9hjg6tBjMpBxfFZavncM8LOCcy8AU0KPQzERXqM2nz4WodkVuA74geV7Bkr+Two9Lk4Qg/2BiwvOLQKuCz3GArcAfQve7w/sDpwlv/fcAheF7UrI/7Fy5JkDzSNYkXp7tKU88432XODqgvdzQZDr77rpdsB5wOWR8pqD2esg//lhwEQxpQy2tB+AldLruyIIcu81UKg2x0xunB/zkK5z3fTvgd8FQe6bhHt8H5gg9WZgkfTeD/w6CHLvV6sNK85+Nd/xWeT4rJInbr08CD12q9WuauixJ8ZGd1qJD4LOwAXAa6FHf8s1cU/SHqHHUMysavcS0nU8MCNBrDa5t4jPlZb3456UW4cexwKPxYhVlHbAWcA1NVi860son5WW/ER+81W28nLd9ClSdy4Cdk5o/GB2oJoIZF03fWIDfksPEeArLCOKHsCvgcdcN93Rkt6fYNx8LsQ4qBZL78mS3hOqTrBCjy2kZ1DI9MjrJy0fH1+jYjVMfl/fBnx8CPBs6JGKee9LS4W6CuhSQroOAu6g/K3GLwo9JsScr7MI0e1l1KWfhV55Q6kqYKTl/GeR13G9kW6umx4nQp3E2w1IUyfgdtdNH1Tm5yYl/J4oB0mPMNbe14D0dgamuG76gGrrYR0siSskOoSa1loES2Y37wK2tFwyA/gNZhbqY8s1AyjdeOtKHhdLVw+LkKwFfovZ/HJ/4A8Q60V+VejVK0fbjFm5gnherZSv66ZHYIzrcbwaeb3Ccs1VJXzNPzG2vsKHw3xgrqX3lm+/k2XIWSpdy7j2566bjltW9xrwecG5FRj77FxgVUJ6/1JmeptcsOJmB9cCz+b/cXzesjTeYaG3yfb1zcGVGENhCggs1+wXuSYF/DLy3mnSS4q1uTk+Ix2fSx2fC6S7b5tYmBB6RZcxQf1ddVeLPeTNgkZzDsYIWsg4x+cSx+clx+cFx+d/gP+Kua4vxkBfzrDpcmAHEdVzLb0OgLGh990w4qVIvt5puf6SgvzftxmEqoMMYaZDrMvNt2CfeImwU7ELgiC3Qe71rpgJBgGpIMgNDoLcUBm6nWrJz4EYQ365vCgPyccThrxdMfbWwvR+G0nv+cDAIMilgiC3cyS9Z1jSu3Njyq+iRndZVnF4XObEGJanUd+gnO9l/bG51MrxWZO3RYSeteC+dHzrE/RMy/kXAL/gu1aFHicBH1p6oWew6cRD0vKPb0Q4rxO7YLQcOljSda/j81TM+b8BnghNlGMKRCRptudCx9+kN/Hn0GNz4Hcx16akIb/n+KzLC23oYZudWp2Q/5XiItdNHyr52hvYDdgq4frbgiCXK+P+XwA3So97dcyD5yJgaRDk1scIxDrgFtdN7wH8t2X49o8y0nJKEORujYjzGBGuuC3mR0v9KOQXwBJLer8BbnTd9F5Sp+PS+0KLC5aMjeMK+fGYc49Wg2A1UqD7YZ+Kn+z49YdQjs+i0OMBiLURHRzTM7VxruPzF8t7u2IiERTysEW014ces2IEa++Y3pytMf5vzPlbLIKF1JP3qqg4B8tRCgulJ1QqHwH7BUEuSOhlLS7o4W0GbCs9qG0wtkvb5MywMtJyX1Ss5Luflpm84yw9orj0LopJ73aS3r6SXptNd0hV9LCwrx3cNvQ4t+CczWg8OvTo7fgsrQHNSprVfD7hvRcsgjUw9Ojk+BTzW/kc+GvC+/tYzl8felZb2RYx5/qVmJ55jl9fXB2fpaHHMstDLEVt8i4wLghyYRmfOStJrCKNvj1wGHA8xiWnV4n3LycvbRNe0y2C1bNIesdJesdSeuiarapdsM4u4x75TLipBiqvazm/yvHrGVGjJO3n2Fee4Enkh1I2+iXYJMqlJyT+lqSeFxiDcVwFrbWlWCsx/neTyozU8E0pti7XTQ+XOr97A9LWrYxrbfXG1kHoYknvCODmhBFGk1AxwbIsdm4o42tEsDolVNJildhGKTMoxXqflQzS1lbjgH2NmYSZJb2S+4MgV9eA+ywVI3WSWO0nZpMtaiFjXDf9QzHpdGnu765kD+uICt5rTOjRNcEDvJCWWuFve9JuGXp0SOgFpYoM94pRbBO3sEK/bz3GPtUWOBW4DzMZ8lWllr8Ue3i5broXxgnYJlavYpa0LcHYhS5tYbHqBdyTIFYvS5qXYGxvFXVhqaRgHVnBe+VjZD0Q89SL69X0SRheNmU+LUjoJe1CfGQK5L04ljl+rLNoudjWKPqUN5u0Ls42VUU92YoSBLmvoNkDSf7EMmT+FDgyCHJvFAzDLm3hsjjbkt4ccEQQ5GZF0ntAVQpWwmJnMPaoTxIE5XnLGHx8jGAtJ37mYV8KAgCKn8/oCj0NbYI4S3oh7S0CPqdMcX+pQuU623J+B8fnsiru5dhsYVu34p6dbWTyy6hYRR7kLc1hlvPnR8Wqwh2Git/Qttg5cHymOT5vWo5Z2A2Sh4tfVxSbp/ipoceAgnMXQtlrE23Dn1hPZ4ls8KzlM+dI1IZCcf8RJlpCHHdXqDxetPQUJoZerB9PtWDL/yNlyVdrZHvL+WwZPfPmxObYPTfm3KBKf3mlhoS2p0QpnsDTiPGmZWOMrGcLxvNx69C2BGaEHn+XsfOBGOe0cnnfInL/IT5XszEzbfc6/nduC7+X7yukFzA99DjV8XlNxPd47FEGFlKhMNGOz+rQ468YL+RCrg09jgNuwyyxWIKZseuKCTkzXPL9GsffZP1nc/CvhEbyeuh959w4z/G5oZUIls0gP4rIPgKum+6N8fhvaWyjkNFR0XLd9NbUj+zR6I5SowUrYbFzqYL1aMKwanyBYN1DfLiYvEA0drw8U0QljjGR3/mGDGVxfJ4UR9C48CNDgJmhx3Kxw9h6CRuAMxy/6OxiOUwCToT6vTwRpP2KfP4NaHbBejXhvSFsdDi8B1qNYL1DvBvKVa6b7odZGL0TxsO9GobG8y3p+JPrpvvL7xkk6e1tuceWLTkktC12/pYSIohKELtXLG+PL7j2FcwsRKkswiyDoURbwBRokJH5NJJ31UmRPGV9gePzdCVrlQxXj4KSZ1oLafZQP47P2yKUxehE68G2frIzxsB+JyYUTJJYNadP2x2W810wy7vuxKwp7d0UX14JwbIZkF91fEr1W3nEcv57EnwuysmQHKlTqJOh6rxSBcvxWZLQjY3Ss+BzdZhAgA+WmXd1wATHrxf4rVICMBPj9T6/FgRLOItkR9TWxt9LFGkwa15XxJxvTreemzGTTaWwmni7ZIP9txolWAmLncG+BCCOpK2zC3tZCzB2rMeKDDN3d3xeJ36GskdCI79aRPGTMsWhzvE5WkTyxSKXf45ZLznY8a1P2EqJ1psYu9RZxBty43rGr4N1nWJT97LyIjuzLaiVLGwehwkxk8QyuS5uyVefZkzvWqnjxURrMWYjj7iZ7/4N/f7G2rDWY/duX1lGJZ1nCWAHMUY+x+dDzE47A4B/ExvAesws4vPyfp6LMfGooqwtkp7bQo+7MIu5h2I8x7/AuFX8Sxq07bOPAI/IDOEoTBjdreRps1SeplnHt0aGiHITJvxzIavKFIG1wGRgskQ33RXjHuLIQ2uVVLAFwNuF0R8i3IeJVhn35Lexj6WeLUlI7yxg79BjFymDPvIddRjv8xmNqLP3WYbv7zSyLXyAWbpT77legggsct303sDpmDWmu2FcfVZIuqYC/xcEuRWum+6CWUy9Ca6b7lzg7DrFUlbvNDb9QZDLuW56pJhCJkp6t5D0zpX03ijpdTCTWYXp7ZgUgtlGuw0bNqAoilILtNcsUBRFBUtRFEUFS1EUFSxFURQVLEVRFBUsRVFUsBRFUVSwFEVRVLAURVHBUhRFqSr+fwDCnrRWq+EZOQAAAABJRU5ErkJggg=="/>
+    </pattern>
+  </defs>
+  <rect id="l2ioIPQs" width="227" height="67" fill="url(#pattern)"/>
+</svg>
+<p>AutoRent Praha</p>
+</div>
+      <div class="f-5"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="67" viewBox="0 0 100 67">
+  <g id="Flag_of_Europe" transform="translate(0.459 0.306)">
+    <rect id="Rectangle_83" data-name="Rectangle 83" width="100" height="67" transform="translate(-0.459 -0.306)" fill="#039"/>
+    <g id="Group_167" data-name="Group 167" transform="translate(23.683 6.894)">
+      <path id="s" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(57.793 -118.243)" fill="#fc0"/>
+      <path id="Path_180" data-name="Path 180" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(57.793 -162.5)" fill="#fc0"/>
+      <g id="s5" transform="translate(0 2.965)">
+        <path id="Path_181" data-name="Path 181" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(46.729 -124.172)" fill="#fc0"/>
+        <path id="Path_182" data-name="Path 182" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(38.629 -132.272)" fill="#fc0"/>
+        <path id="Path_183" data-name="Path 183" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(35.665 -143.336)" fill="#fc0"/>
+        <path id="Path_184" data-name="Path 184" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(38.629 -154.4)" fill="#fc0"/>
+        <path id="Path_185" data-name="Path 185" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(46.729 -162.5)" fill="#fc0"/>
+      </g>
+      <g id="Group_166" data-name="Group 166" transform="translate(52.149 48.798) rotate(180)">
+        <path id="Path_186" data-name="Path 186" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(11.064 0)" fill="#fc0"/>
+        <path id="Path_187" data-name="Path 187" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(2.965 8.1)" fill="#fc0"/>
+        <path id="Path_188" data-name="Path 188" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(0 19.164)" fill="#fc0"/>
+        <path id="Path_189" data-name="Path 189" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(2.965 30.228)" fill="#fc0"/>
+        <path id="Path_190" data-name="Path 190" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(11.064 38.328)" fill="#fc0"/>
+      </g>
+    </g>
+  </g>
+</svg>
+<p>Elektromobilita</p>
+</div>
+      <div class="f-5"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="67" viewBox="0 0 100 67">
+  <g id="Flag_of_Europe" transform="translate(0.459 0.306)">
+    <rect id="Rectangle_83" data-name="Rectangle 83" width="100" height="67" transform="translate(-0.459 -0.306)" fill="#039"/>
+    <g id="Group_167" data-name="Group 167" transform="translate(23.683 6.894)">
+      <path id="s" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(57.793 -118.243)" fill="#fc0"/>
+      <path id="Path_180" data-name="Path 180" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(57.793 -162.5)" fill="#fc0"/>
+      <g id="s5" transform="translate(0 2.965)">
+        <path id="Path_181" data-name="Path 181" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(46.729 -124.172)" fill="#fc0"/>
+        <path id="Path_182" data-name="Path 182" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(38.629 -132.272)" fill="#fc0"/>
+        <path id="Path_183" data-name="Path 183" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(35.665 -143.336)" fill="#fc0"/>
+        <path id="Path_184" data-name="Path 184" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(38.629 -154.4)" fill="#fc0"/>
+        <path id="Path_185" data-name="Path 185" d="M-31.719,162.5l2.439,7.506-6.385-4.639h7.892l-6.385,4.639Z" transform="translate(46.729 -162.5)" fill="#fc0"/>
+      </g>
+      <g id="Group_166" data-name="Group 166" transform="translate(52.149 48.798) rotate(180)">
+        <path id="Path_186" data-name="Path 186" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(11.064 0)" fill="#fc0"/>
+        <path id="Path_187" data-name="Path 187" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(2.965 8.1)" fill="#fc0"/>
+        <path id="Path_188" data-name="Path 188" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(0 19.164)" fill="#fc0"/>
+        <path id="Path_189" data-name="Path 189" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(2.965 30.228)" fill="#fc0"/>
+        <path id="Path_190" data-name="Path 190" d="M3.946,7.506,6.385,0,0,4.639H7.892L1.507,0Z" transform="translate(11.064 38.328)" fill="#fc0"/>
+      </g>
+    </g>
+  </g>
+</svg>
+<p>Adaptace Brownfieldu</p>
+</div>
+    </div>
+  </div>
+  </footer>  
+<section class="footer-bottom">
+      <div class="copyright">
+        <p>&copy; 2026 LOSL s.r.o. Všechna práva vyhrazena.</p>
+      </div>
+    </section>
+    
+    
+
+  
+</body>
+
+</html>

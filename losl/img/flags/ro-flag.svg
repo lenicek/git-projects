@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="ro flag" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 41.2 41.2">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fcd116;
+      }
+
+      .st2 {
+        fill: #ce1126;
+      }
+
+      .st3 {
+        fill: #002b7f;
+      }
+
+      .st4 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="st0" cx="20.6" cy="20.6" r="20.6"/>
+    </clipPath>
+  </defs>
+  <g class="st4">
+    <g>
+      <rect class="st3" x="-10.3" width="20.6" height="41.2"/>
+      <rect class="st1" x="10.3" width="20.6" height="41.2"/>
+      <rect class="st2" x="30.9" width="20.6" height="41.2"/>
+    </g>
+  </g>
+</svg>
