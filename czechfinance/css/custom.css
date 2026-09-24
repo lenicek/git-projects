@@ -109,6 +109,12 @@
   padding-inline: 1rem; 
 }
 
+.f-row > .f-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .info-box {
   background-color: var(--color-border-gray);
   border-top: 0.8rem solid var(--color-primary-blue);
@@ -271,7 +277,7 @@
 
 #main-nav ul li a:hover,
 #main-nav ul li a:focus-visible {
-  color: var(--color-primary-red);
+  color: var(--color-azure);
 }
 
 .menu-toggle {
@@ -635,14 +641,24 @@ padding-inline: var(--space-md);
   text-align: center;
 }
 
-.section-new-cars > .content-wrapper, .section-deals > .content-wrapper {
+.section-new-cars > .content-wrapper, 
+.section-deals > .content-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Vytvoří sloupce o min. šířce 300px, ale maximálně rozdělí řádek na 3 díly */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: var(--space-md);
   width: 100%;
   max-width: 1660px;
   margin: 0 auto;
   position: relative;
+}
+
+/* Omezí maximální počet sloupců na 3 na desktopu */
+@media (min-width: 1024px) {
+  .section-new-cars > .content-wrapper, 
+  .section-deals > .content-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .section-new-cars .car-card, .section-deals .car-card {
@@ -907,10 +923,11 @@ display: block;
   margin-right: var(--space-lg);
   }
 
-div.f-2:nth-child(2) {
+/* div.fin:nth-child(2), div.f-2:nth-child(2) {
   padding-left: var(--space-lg);
-  padding-top: var(--space-lg);
-}
+  
+ 
+} */
 
 
   /* ==========================================
@@ -953,4 +970,160 @@ div.f-2:nth-child(2) {
   padding: 0;
   margin: 0;
 }
+
+/*    selector  */
+ /* Kontejner filtru - 5 sloupců pro desktop */
+.filter-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 1660px;
+  margin: 0 auto var(--space-md) auto;
+}
+
+@media (min-width: 640px) {
+  .filter-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .filter-bar {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Wrapper pro udržení stejného vzhledu a pozicování šipky */
+.select-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Základní styl pro VŠECHNY boxy (jednotné pozadí, písmom i výška) */
+.filter-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary-black);
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border-gray);
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Nerozbalovací (jednovariantové) položky */
+.filter-select:disabled,
+.select-wrapper:not(:has(option:nth-child(2))) .filter-select {
+  cursor: default;
+}
+
+/* Šipka (trojúhelník) POUZE pro rozbalovací varianty s více options */
+.select-wrapper:has(option:nth-child(2))::after {
+  content: "";
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
   
+  /* Vykreslení malého trojúhelníku */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid var(--color-primary-black);
+  
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
+
+/* Odsazení textu u rozbalovacích, aby nezasahoval pod šipku */
+.select-wrapper:has(option:nth-child(2)) .filter-select {
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  border-color: var(--color-azure);
+  box-shadow: 0 0 0 2px rgba(54, 169, 241, 0.2);
+}
+
+/* financování */
+
+.fin h1 {
+  font-style: italic;
+  color: var(--color-primary-blue);
+  padding-bottom: var(--space-md);
+  font-size: calc(var(--font-xl) - 1rem);
+  text-transform: uppercase;
+}
+.fin h2 {
+  color: var(--color-primary-blue);
+  padding-block: var(--space-sm);
+  font-size: calc(var(--font-lg) - 0.5rem);
+  
+}
+.fin p {
+  color: var(--color-primary-black);
+  padding-block: var(--space-sm);
+}
+
+.fin span {
+  color: var(--color-primary-red);
+  font-weight: 700;
+  font-size: var(--font-lg);
+}
+
+.fin img {
+  width: 100%;
+  height: auto;
+}
+
+/* Od notebooků/desktopů nahoru (např. nad 992px): 75% */
+@media (min-width: 992px) {
+  .fin img {
+    width: 75%;
+  }
+
+  div.fin:nth-child(2), div.f-2:nth-child(2) {
+  padding-left: var(--space-lg);
+}
+}
+
+.financovani, .splatky, .opleasing, .zleasing{
+margin-block: var(--space-lg); 
+}
+
+.fin button, .prodej button {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-lg) 0;
+  max-width: 30rem;
+  
+}
+
+/*   PRODEJ */
+.prodej {
+  margin-block: var(--space-xl);
+}
