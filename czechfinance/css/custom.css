@@ -43,6 +43,7 @@
   font-display: swap;
 }
 
+
 /* ==========================================
    2. CUSTOM PROPERTIES / VARIABLES
    ========================================== */
@@ -88,10 +89,26 @@
 }  
 
 /* ==========================================
+   3. RESET & BASE ELEMENTS
+   ========================================== */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  padding-left: var(--space-md); /* Posune odrážky bezpečně do kontejneru */
+}
+
+/* Plynulý posun po kliknutí na odkaz s #id */
+
+:target {
+  scroll-margin-top: var(--space-xl, 4rem);
+}
+
+/* ==========================================
    3. GLOBAL & LAYOUT CONTAINERS
    ========================================== */
 .content-wrapper {
-  max-width: 1660px;
+  max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -923,11 +940,10 @@ display: block;
   margin-right: var(--space-lg);
   }
 
-/* div.fin:nth-child(2), div.f-2:nth-child(2) {
-  padding-left: var(--space-lg);
-  
- 
-} */
+.contact-form > .content-wrapper {
+  width: 100%;
+}
+
 
 
   /* ==========================================
@@ -1107,19 +1123,22 @@ display: block;
   div.fin:nth-child(2), div.f-2:nth-child(2) {
   padding-left: var(--space-lg);
 }
+.hero-gallery {padding-left: 0px!important;}
 }
 
 .financovani, .splatky, .opleasing, .zleasing{
 margin-block: var(--space-lg); 
 }
 
-.fin button, .prodej button {
+.fin button, .prodej button, .btn-gdpr {
   background-color: var(--color-primary-blue);
   color: var(--color-white);
   border: none;
   padding: var(--space-sm) var(--space-md);
   margin: var(--space-lg) 0;
-  max-width: 30rem;
+  /* max-width: 30rem; */
+  display: inline-block;
+  text-align: center;
   
 }
 
@@ -1127,3 +1146,306 @@ margin-block: var(--space-lg);
 .prodej {
   margin-block: var(--space-xl);
 }
+
+/* O nas */
+
+.czech-finance-info {
+  margin-block: var(--space-xl);
+}
+
+.czech-finance-info h2 {
+  font-size: var(--font-lg);
+  color: var(--color-primary-blue);
+  font-weight: 700;
+  font-style: italic;
+  padding-block: var(--space-md)
+}
+
+.czech-finance-info h3 {
+  color: var(--color-primary-blue);
+  padding-block: var(--space-sm);
+}
+.o-nas {
+  background-image: url(../img/hero-o-nas.jpg);
+}
+
+.hero.o-nas {
+  align-items: center;
+}
+
+.hero-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-content: center;
+  gap: var(--gap-lg);
+  
+}
+
+.hero-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1023px) {
+  .hero-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .hero.o-nas > .content-wrapper,
+  .hero.o-nas > .hero-gallery {
+    flex-basis: 100%;
+  }
+
+  .hero-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.hero.o-nas > .content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap-lg);
+  width: 100%;
+}
+
+.hero.o-nas > .content-wrapper > .f-2 {
+  grid-column: span 1;
+  width: auto;
+  max-width: none;
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .hero.o-nas > .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-gallery .advantage p {
+  font-size: var(--font-sm);
+  text-align: center;
+  padding-top: var(--space-sm);
+}
+
+.gdpr-document {padding-inline: var(--space-md);}
+
+/* Kontakty */
+.j-top {
+  justify-content: flex-start!important;
+}
+
+.contact-card, .j-top {
+  padding-bottom: var(--space-md);
+  h2 { color: var(--color-primary-blue);
+    font-size: calc(var(--font-xl) - 1rem);
+    padding-bottom: var(--space-md);}
+  h3, strong{
+    color: var(--color-primary-blue);
+}
+  h3 { font-size: var(--font-lg);}
+
+  p {padding-bottom: var(--space-sm);}
+}
+
+.position, .subtitle { 
+  font-style: italic;
+  display: inline-block;
+padding-top: var(--space-sm);
+}
+
+/*   AKCE  */
+
+.akce > .content-wrapper {
+  display: grid;
+  width: 100%;
+  gap: var(--space-lg);
+}
+
+.akce-article {
+  display: grid;
+  /* align-items: center; */
+  gap: var(--gap-lg);
+}
+
+.akce-article--text-image {
+  grid-template-columns: 3fr 1fr;
+}
+
+.akce-article--image-text {
+  grid-template-columns: 1fr 3fr;
+}
+
+.akce-copy {
+  min-width: 0;
+}
+
+.akce-copy h2,
+.akce-copy h3,
+.akce-copy p {
+  margin-block: var(--space-sm);
+}
+
+.akce-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--gap-sm);
+  margin-top: var(--space-md);
+}
+
+.akce-gallery img,
+.akce-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .akce-article--text-image,
+  .akce-article--image-text {
+    grid-template-columns: 1fr;
+  }
+
+  .akce-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap-md);
+}
+
+.contact-form-grid label {
+  display: grid;
+  gap: var(--gap-xs);
+}
+
+.contact-form-grid input:not([type="checkbox"]) {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form-consent {
+  display: flex !important;
+  grid-column: 1;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.contact-form-consent input {
+  flex: 0 0 auto;
+}
+
+.contact-form-grid button {
+  grid-column: 2;
+}
+
+@media (max-width: 767px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-consent,
+  .contact-form-grid button {
+    grid-column: 1;
+  }
+}
+
+.akce-article {
+  background-color: var(--color-border-gray);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+    table { width: 100%;
+    text-align: left;
+    margin-block: var(--space-lg);
+    
+    }
+    th, td {
+      padding: 0.3rem;
+    }
+    th {background-color: var(--color-primary-blue) ;
+    color: var(--color-white);}
+    td {
+      border-bottom: 1px solid var(--color-primary-blue);
+    }
+    h2, h3, h4, .cont-head{
+      color: var(--color-primary-blue);
+      font-style: italic;
+
+    }
+    h2 { font-size: var(--font-lg);}
+    h3 {font-size: var(--font-xl);}
+    h4 {font-size: var(--font-md);}
+}
+
+.stock-badge {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-lg) 0;
+  display: inline-block;
+  text-align: center;
+  }
+
+  .process-steps {
+  /* Přidá trochu prostoru mezi číslem a textem */
+  padding-left: var(--space-md);
+
+  li::marker {
+    color: var(--color-primary-blue); /* Nebo akcentní barva, např. var(--color-azure) */
+    font-weight: 700;
+    font-size: 1.1em; /* Čísla mohou být i o chlup větší */
+
+  }
+}
+
+/* Obal se stará o oříznutí a horizontální scrollbar */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-block: var(--space-md);
+}
+
+/* Tabulka si drží svou minimální šířku, aby se nepromačkala */
+.data-table {
+  width: 100%;
+  min-width: 550px; /* Přizpůsob podle počtu sloupců */
+  border-collapse: collapse;
+}
+
+.contact-form-grid  input {
+  border: 2px solid var(--color-border-gray);
+  background-color: var(--color-bg-light);
+  padding: 0.9rem;
+  }
+.cont-head {
+      color: var(--color-primary-blue);
+      font-size: var(--font-lg);
+      font-style: italic;
+      padding-bottom: var(--space-md);
+}
+.contact-form-grid button[type="submit"]{
+
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-sm) 0;
+  display: inline-block;
+  text-align: right;
+  justify-self: end;
+  width: auto;
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
