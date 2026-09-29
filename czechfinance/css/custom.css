@@ -787,6 +787,24 @@ padding-inline: var(--space-md);
     clip-path: polygon(0 100%, 100% 87%, 100% 13%, 0 0);
   }
 
+  .detail-v > .content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin-inline: var(--space-md);
+    margin-block: var(--space-lg);
+    
+  }
+
+  @media (min-width: 768px) {
+    .detail-v > .content-wrapper {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: var(--space-lg);
+      align-items: start;
+      margin: var(--space-lg) auto;
+      
+    }
+  }
+
   /*  quick contact */
   .quick-contact > .content-wrapper {
     position: relative;
@@ -961,12 +979,13 @@ display: block;
   display: grid;
   gap: var(--gap-md);
   grid-template-columns: 1fr;
+  align-items: center;
 }
 
 /* Desktop od 768px: 3 sloupce */
 @media (min-width: 768px) {
   .site-footer > .content-wrapper {
-    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-columns: 3fr 1fr 3fr;
   }
 }
 
@@ -1153,7 +1172,7 @@ margin-block: var(--space-lg);
   margin-block: var(--space-xl);
 }
 
-.czech-finance-info h2 {
+.czech-finance-info h2, .detail-v h2 {
   font-size: var(--font-lg);
   color: var(--color-primary-blue);
   font-weight: 700;
@@ -1161,7 +1180,7 @@ margin-block: var(--space-lg);
   padding-block: var(--space-md)
 }
 
-.czech-finance-info h3 {
+.czech-finance-info h3, .detail-v h3 {
   color: var(--color-primary-blue);
   padding-block: var(--space-sm);
 }
@@ -1449,3 +1468,150 @@ padding-top: var(--space-sm);
   text-transform: uppercase;
 }
 
+/* DETAIL VOZU */
+
+/* galerie */
+
+.gallery-v {
+  padding-block: var(--space-lg);
+}
+/* Kontejner galerie */
+.gallery {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* velky nahled */
+.main-image {
+  width: 100%;
+  aspect-ratio: 16 / 10; /* zachova pomer stran */
+  background-color: var(--color-white);
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+/* Hlavní fotka - tranzice */
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out; /* delka tranzice */
+}
+
+/* Třída pro efekt zmizení */
+.main-image img.fade {
+    opacity: 0;
+}
+
+/* Mřížka miniatur pod vozem */
+.thumbnails {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap; /* Pro mobilní zobrazení, pokud je fotek víc */
+}
+
+.thumbnails img {
+  width: 90px;
+  height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 0px;
+  border: 2px solid transparent;
+  opacity: 0.7;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover efekt na miniatury */
+.thumbnails img:hover {
+  opacity: 1;
+}
+
+/* Zvýraznění vybrané/aktivní fotky */
+.thumbnails img.active {
+  opacity: 1;
+  border-color: var(--color-primary-blue); 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* info o vozu */
+.vehicle-specs { display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding-left: 0px;
+list-style-type: none;}
+
+.detail-v p{
+  padding-top: var(--space-sm);
+}
+.detail-v strong {
+  color: var(--color-primary-blue);
+}
+.detail-v h3 {
+  font-size: calc(var(--font-lg) - 0.4rem );
+}
+.vehicle-price, .vehicle-specs {
+  display: flex;
+  justify-content: space-between; /* Rozstrčí položky na krajní okraje */
+  align-items: center;            /* Srovná položky vertikálně na střed */
+  width: 100%;
+  
+}
+.vehicle-specs, .vehicle-price, .vehicle-details {
+    gap: var(--space-sm);
+    padding-bottom: var(--space-md);
+}
+.vehicle-specs li {
+  background-color: var(--color-border-gray);
+  padding: var(--space-sm) var(--space-md);
+  flex: 1 1 100px;
+}
+
+.vehicle-price span {
+  display: inline-block;
+  background-color: var(--color-azure);
+  color: var(--color-white);
+  padding: 0.5rem 2rem;
+  font-size: var(--font-md);
+  font-weight: 700;
+}
+
+.cont-tel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 700;
+  color: var(--color-primary-blue);
+}
+
+
+/*  STYLOVANI FORMULARE */
+.rental-form-layout input {
+  border: 2px solid var(--color-border-gray);
+  background-color: var(--color-bg-light);
+  padding: 0.9rem;
+}
+.rental-form-layout button[type="submit"] {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-sm) 0;
+  display: inline-block;
+  text-align: right;
+  justify-self: end;
+  width: auto;
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rental-form-layout button[type="submit"] {
+  color: var(--color-white);
+  text-align: right;
+  font-size: var(--font-md);
+  font-weight: 700;
+  text-transform: uppercase;
+}
