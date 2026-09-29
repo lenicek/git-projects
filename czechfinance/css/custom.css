@@ -1588,7 +1588,61 @@ list-style-type: none;}
 
 
 /*  STYLOVANI FORMULARE */
-.rental-form-layout input {
+
+.detail-v-form {
+  padding-block: var(--space-lg);
+  background-color: var(--color-azure);
+  margin-bottom: var(--space-lg);
+}
+.rental-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Mřížka rozdělená na 6 částí */
+  gap: var(--gap-md);
+}
+
+
+/* 1. Řádek: 3 sloupce */
+.rental-grid .col-2 {
+  grid-column: span 2;
+}
+
+/* 2. Řádek: 2 sloupce */
+.rental-grid .col-3 {
+  grid-column: span 3;
+}
+
+/* 3. Řádek: 1 sloupec přes celou šířku */
+.rental-grid .col-6 {
+  grid-column: span 6;
+}
+
+/* 4. Řádek: Tlačítko */
+.rental-grid .col-auto {
+  grid-column: 1 / -1;   
+  justify-self: end;   /* Zarovná ho doprava/doleva na začátek bez roztahování */
+  width: max-content;    /* Šířka se přizpůsobí přesně délce textu */
+}
+
+.rental-grid label {
+  display: grid;
+  gap: var(--gap-xs);
+}
+
+.rental-grid input:not([type="checkbox"]),
+.rental-grid textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobilní responzivita */
+@media (max-width: 768px) {
+  .rental-grid .col-2,
+  .rental-grid .col-3,
+  .rental-grid .col-auto {
+    grid-column: span 6; /* Na mobilu skočí všechno do jednoho sloupce под sebe */
+  }
+} 
+.rental-form-layout input, .rental-form-layout textarea {
   border: 2px solid var(--color-border-gray);
   background-color: var(--color-bg-light);
   padding: 0.9rem;

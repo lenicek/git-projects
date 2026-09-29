@@ -221,40 +221,40 @@
         <section class="detail-v-form">
             <div class="content-wrapper">
                 <h2 class="cont-head">Formulář k zapůjčení:</h2>
-                <form class="rental-form-layout" action="#" method="post">
+                <form class="rental-form-layout rental-grid" action="#" method="post">
 
 
-                <label>
+                <label class="col-2">
                     Jméno, název firmy
                     <input type="text" name="name" required>
                 </label>
 
-                <label>
+                <label class="col-2">
                     Datum zapůjčení
                     <input type="date" name="rental_date">
                 </label>
 
-                <label>
+                <label class="col-2">
                     Doba zapůjčení
                     <input type="text" name="rental_duration">
                 </label>
 
-                <label>
+                <label class="col-3">
                     E-mail
                     <input type="email" name="email" required>
                 </label>
 
-                <label class="full-width">
+                <label class="col-3">
                     Telefon
                     <input type="tel" name="phone">
                 </label>
 
-                <label class="full-width">
+                <label class="col-6">
                     Vaše zpráva
                     <textarea name="message" rows="4"></textarea>
                 </label>
 
-                <button type="submit">Odeslat</button>
+                <button type="submit" class="col-auto">Odeslat</button>
                 </form>
             </div>
 
