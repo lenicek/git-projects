@@ -432,7 +432,7 @@ padding-inline: var(--space-md);
   padding: var(--space-lg) var(--space-md);
   background-color: var(--color-primary-blue);
   color: var(--color-white);
-  min-height: 800px;
+  min-height: 666px;
   background-image: url('../img/hero-cf.jpg'); 
   background-size: cover;
   background-position: center;
