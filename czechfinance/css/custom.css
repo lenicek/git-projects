@@ -108,7 +108,7 @@ ol {
    3. GLOBAL & LAYOUT CONTAINERS
    ========================================== */
 .content-wrapper {
-  max-width: 1440px;
+  max-width: 1480px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
@@ -237,7 +237,7 @@ ol {
   border-radius: 1.4rem;
   background: var(--color-azure);
   color: var(--color-white);
-  font-size: var(--font-md);
+  font-size: calc(var(--font-md) - 0.2rem);
   font-weight: 700;
   text-decoration: none;
   max-width: 250px;
@@ -497,7 +497,7 @@ padding-inline: var(--space-md);
 }
 
 .service-card h2 {
-  font-size: var(--font-xl);
+  font-size: calc(var(--font-xl) - 1rem);
   margin-block:var(--space-md);
   font-weight: 600;
 }
