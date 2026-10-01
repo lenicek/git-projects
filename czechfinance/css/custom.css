@@ -533,13 +533,27 @@ padding-inline: var(--space-md);
   right: var(--space-md);
 }
 
+/* Výchozí stav šipky */
+#Group_172 #Path_577 {
+  opacity: 1;
+  transform: translateX(-4px); /* posun směrem k levému okraji kruhu */
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.35s ease-in-out;
+}
+
+/* Stav při hoveru na SVG */
+#Group_172:hover #Path_577 {
+  opacity: 1;
+  transform: translateX(0); /* dojezd na původní pozici */
+}
+
 /* benefits section */
 
 .benefits {
   position: relative;
   min-height: 430px;
   padding: var(--space-lg) var(--space-md);
-  isolation: isolate;
+  /* isolation: isolate; */
 }
 
 .benefits::before {
@@ -1668,4 +1682,21 @@ list-style-type: none;}
   font-size: var(--font-md);
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@keyframes slideDownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.benefits-list .benefit-item {
+  animation: slideDownIn linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 35%;
 }
