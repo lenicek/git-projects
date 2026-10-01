@@ -436,6 +436,7 @@ padding-inline: var(--space-md);
   background-image: url('../img/hero-cf.jpg'); 
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /*   parallax efekt */
 }
 
 .hero .content-wrapper {
@@ -470,6 +471,11 @@ padding-inline: var(--space-md);
   text-decoration: none;
   max-width: 250px;
   margin-top: var(--space-md);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hero-button:hover, .input-group button:hover, .hero-button:focus-visible, .input-group button:focus-visible {
+  background: var(--color-azure);
 }
 
 .services {
@@ -763,8 +769,13 @@ padding-inline: var(--space-md);
   font-size: var(--font-lg);
   font-weight: 700;
   text-align: center;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+.section-new-cars .price-main:hover, .section-deals .price-main:hover {
+  background-color: var(--color-azure);
+  transform: translateY(-6px);
+}
 .section-new-cars .price-sub, .section-deals .price-sub {
   color: var(--color-text-muted);
   font-size: var(--font-sm);
@@ -964,12 +975,13 @@ flex: 1;
 display: block;
   color: var(--color-white);
   border-radius: 2rem;
-  background: linear-gradient(180deg, #efb800 0%, #e49d08 72.5%, #e0930b 100%);
+  background: var(--color-accent-yellow);
   padding: 1rem 3rem;
   font-size: var(--font-md);
   font-weight: 700;
   text-transform: uppercase;
   margin-right: var(--space-lg);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
 .contact-form > .content-wrapper {
