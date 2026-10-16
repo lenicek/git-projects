@@ -118,38 +118,113 @@
           
           <div class="hero-text">
                       <H1>Vykoupíme váš <span>vůz</span> </H1>
-                      <div><a href=".." class="cta-button">NABÍDNOUT VŮZ</a></div>
+                      <div><label for="vehicle-tab-buy" class="cta-button">NABÍDNOUT VŮZ</label></div>
           </div>
         </div>
       </section>
 <section class="selector">
   <div class="content-wrapper">
-    
-    <ul class="hero-tabs">
-      <li class="tab-item active">
-        <span>PRODEJ VOZŮ</span>
-      </li>
-      <li class="tab-item">
-        <a href="vykup.html">VÝKUP VOZŮ</a>
-      </li>
-    </ul>
-
-    <div class="hero-selector-box">
-      <ul>
-        <li><a href=".."><img src="img/ikonky-web-01.svg" alt=""><span>Vozy do 7,5 tuny</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-02.svg" alt=""><span>Vozy nad 7,5 tuny</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-03.svg" alt=""><span>Tahače návěsů</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-04.svg" alt=""><span>Přívěsy</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-05.svg" alt=""><span>Návěsy</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-06.svg" alt=""><span>Stavební stroje</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-07.svg" alt=""><span>Dodávky</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-08.svg" alt=""><span>Osobní automobily</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-09.svg" alt=""><span>Manipulční technika</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-10.svg" alt=""><span>Zemědělské stroje</span></a></li>
-        <li><a href=".."><img src="img/ikonky-web-11.svg" alt=""><span>Autobusy</span></a></li>
+    <fieldset class="vehicle-tab-switcher">
+      <legend class="sr-only">Vyberte prodej nebo výkup vozidel</legend>
+      <input class="vehicle-tab-input" type="radio" name="vehicle-tab" id="vehicle-tab-sale" aria-label="Prodej vozů" checked>
+      <input class="vehicle-tab-input" type="radio" name="vehicle-tab" id="vehicle-tab-buy" aria-label="Výkup vozů">
+      <ul class="hero-tabs">
+        <li class="tab-item"><label for="vehicle-tab-sale">PRODEJ VOZŮ</label></li>
+        <li class="tab-item"><label for="vehicle-tab-buy">VÝKUP VOZŮ</label></li>
       </ul>
-    </div>
 
+      <div class="vehicle-tab-panels">
+        <div class="hero-selector-box vehicle-tab-panel" id="vehicle-panel-sale">
+          <ul>
+            <li><a href=".."><img src="img/ikonky-web-01.svg" alt=""><span>Vozy do 7,5 tuny</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-02.svg" alt=""><span>Vozy nad 7,5 tuny</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-03.svg" alt=""><span>Tahače návěsů</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-05.svg" alt=""><span>Přívěsy</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-04.svg" alt=""><span>Návěsy</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-06.svg" alt=""><span>Stavební stroje</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-07.svg" alt=""><span>Dodávky</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-08.svg" alt=""><span>Osobní automobily</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-09.svg" alt=""><span>Manipulační technika</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-10.svg" alt=""><span>Zemědělské stroje</span></a></li>
+            <li><a href=".."><img src="img/ikonky-web-11.svg" alt=""><span>Autobusy</span></a></li>
+          </ul>
+        </div>
+
+        <section class="vehicle-offer-section vehicle-tab-panel" id="vehicle-panel-buy" aria-labelledby="vehicle-offer-title">
+          <form
+            class="vehicle-offer-form"
+            action="/cz/komisni-prodej/dekujeme.html"
+            method="post"
+            enctype="multipart/form-data"
+            id="komisni-prodej"
+          >
+            <div class="vehicle-offer-heading">
+              <h2 id="vehicle-offer-title">Nabídněte nám svůj vůz</h2>
+              <p>Pole označená <span class="vehicle-offer-required" aria-hidden="true">*</span> jsou povinná</p>
+            </div>
+
+            <div class="vehicle-offer-fields">
+              <div class="vehicle-offer-field">
+                <label for="company">Jméno, název firmy <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" name="company" id="company" autocomplete="name" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="phone">Váš telefon <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" name="phone" id="phone" autocomplete="tel" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="email">Váš e-mail <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="email" name="email" id="email" autocomplete="email" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="brand">Vozidlo <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" name="brand" id="brand" placeholder="např. DAF XF 480" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="year">První registrace</label>
+                <input class="form-input" type="text" name="year" id="year" placeholder="MM/RRRR" inputmode="numeric">
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="mileage">Najeto</label>
+                <input class="form-input" type="number" name="mileage" id="mileage" min="0" placeholder="km">
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="price">Cena</label>
+                <input class="form-input" type="text" name="price" id="price" placeholder="Kč">
+              </div>
+              <div class="vehicle-offer-field vehicle-offer-message">
+                <label for="desc">Vaše zpráva</label>
+                <textarea class="form-input" name="desc" id="desc" rows="6" placeholder="Stav vozu, výbava, servisní historie..."></textarea>
+              </div>
+              <div class="vehicle-offer-field vehicle-offer-photos">
+                <span class="vehicle-offer-upload-label" id="upload-label">Fotografie (jpeg/png/gif)</span>
+                <label class="vehicle-offer-dropzone" for="upload" aria-describedby="upload-help">
+                  <input
+                    class="vehicle-offer-file-input"
+                    type="file"
+                    name="upload[]"
+                    id="upload"
+                    accept="image/jpeg,image/png,image/gif"
+                    multiple
+                    aria-labelledby="upload-label"
+                  >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 3h-9a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9"></path>
+                    <path d="M14 3v5h5M16 3v5h5M18.5 13v6M15.5 16h6"></path>
+                    <path d="m6 17 3.5-4 2.5 3 1.5-2 2.5 3"></path>
+                  </svg>
+                  <strong>Vyberte fotografie ze zařízení</strong>
+                  <span id="upload-help">Formáty JPG, PNG nebo GIF</span>
+                </label>
+              </div>
+              <input type="hidden" name="pobocka" value="1">
+              <input type="hidden" name="check" value="474GGT35MM1700">
+              <button class="vehicle-offer-submit" type="submit" name="submit">Odeslat</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </fieldset>
   </div>
 </section>
 

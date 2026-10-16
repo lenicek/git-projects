@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42 42">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+        stroke: #222f58;
+        stroke-miterlimit: 10;
+      }
+
+      .st2 {
+        fill: #d4e5f3;
+      }
+
+      .st1 {
+        stroke-width: 1.2px;
+      }
+    </style>
+  </defs>
+  <circle class="st2" cx="21" cy="21" r="16.9"/>
+  <g>
+    <rect class="st1" x="13.3" y="13.3" width="15.5" height="15.5" rx="1.1" ry="1.1"/>
+    <path class="st0" d="M21,28.7v-15.5,15.5Z"/>
+    <path class="st0" d="M28.7,21"/>
+    <path class="st0" d="M28.7,21h-15.5,15.5Z"/>
+  </g>
+  <path class="st0" d="M21,21"/>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 25 25">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #d4e5f3;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #222f58;
+        stroke-miterlimit: 10;
+        stroke-width: .7px;
+      }
+    </style>
+  </defs>
+  <circle class="st0" cx="12.5" cy="12.5" r="11.3"/>
+  <g>
+    <circle class="st1" cx="12.5" cy="12.5" r="5.6"/>
+    <polyline class="st1" points="12.6 9.3 12.6 12.2 14.8 14.7"/>
+  </g>
+</svg>

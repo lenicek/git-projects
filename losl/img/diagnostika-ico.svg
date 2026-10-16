@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 42 42">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #d4e5f3;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #222f58;
+        stroke-miterlimit: 10;
+        stroke-width: 1.1px;
+      }
+    </style>
+  </defs>
+  <circle class="st0" cx="21" cy="21" r="16.9"/>
+  <g>
+    <path class="st1" d="M13.4,19.2c0-3.7,3-6.7,6.7-6.7s6.7,3,6.7,6.7-3,6.7-6.7,6.7-3.9-1-5.2-2.4"/>
+    <line class="st1" x1="24.9" y1="23.9" x2="30.5" y2="29.5"/>
+    <polyline class="st1" points="11.5 21.2 15.8 21.2 17.8 16.2 20.1 22.4 21.7 17.9 24 21.6"/>
+  </g>
+</svg>

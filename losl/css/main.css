@@ -11,7 +11,7 @@
 --font-sm: clamp(0.55rem, 0.8vw, 0.75rem);   
   --font-md: clamp(0.7rem, 1.5vw, 1.0rem);    
   --font-lg: clamp(1.1rem, 2.2vw, 1.8rem);   
-  --font-xl: clamp(3.5rem, 5.2vw, 5rem);   
+ --font-xl: clamp(2.5rem, 1.25rem + 3.5vw, 4.5rem);  
 
   /* Spacing scale */
   --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);  
@@ -158,7 +158,7 @@ p {
 
 h1, h2, h3 {
   font-weight: 700;
-  padding-bottom: var(--gap-md);
+  /* padding-bottom: var(--gap-md); */
 }
 
 
@@ -251,7 +251,7 @@ text-align: right;
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
   text-align: right;
-  font-size: var(--font-md);
+  font-size: calc(var(--font-md) - 0.22rem);
   color: var(--color-primary-black);
   text-decoration: none;
   text-transform: uppercase;
@@ -434,7 +434,7 @@ display: none;
 /* ===== MAIN GRID LAYOUT ===== */
 
 .content-wrapper {
-  max-width: 1880px;
+  max-width: 1480px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -466,13 +466,16 @@ display: none;
 .minihero {
   display: flex;
   padding-block: var(--space-xl);
+  align-items: center;
   background-image: url(../img/minihero.jpg);
   background-size: cover; 
   background-position: center;
+  min-height: 10rem;
     h1 {
       color: var(--color-white);
       font-size: var(--font-xl);
       text-align: right;
+      padding-bottom: 0px;
 
     }
     .content-wrapper {
@@ -480,13 +483,111 @@ display: none;
     }
 }
 
+.service-icon, .kontakty-icon, .o-firme-icon, .financovani-icon, .vykup-icon, .dovoz-icon, .prodej-icon, .nabidka-icon, .navesy-icon {
+  position: relative;
+}
+
+.service-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/service-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.kontakty-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/kontakt-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+
+.o-firme-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/o-nas-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.financovani-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/financovani-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.vykup-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/vykup-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.dovoz-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/dovoz-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.prodej-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/prodej-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+.nabidka-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/nabidka-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+
+.navesy-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/navesy-icon.svg") center / contain no-repeat;
+  transform: translateY(-50%);
+}
+
+
 .section-title {
   font-family: var(--font-serif);
   font-size: var(--font-xl);
   color: var(--color-primary-blue);
   font-weight: 700;
   text-align: center;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-sm);
 }
 
 /*  Hero section */
@@ -508,7 +609,7 @@ display: none;
     background-size: cover;
     width: 100%;
     position: relative;
-    min-height: 945px;
+    min-height: 640px;
     color: var(--color-white);
     padding-bottom: 6rem;
 
@@ -538,6 +639,18 @@ display: none;
   z-index: 255;
   position: relative;
 }
+.selector2 {
+  margin-top: -1rem;
+  z-index: 255;
+  position: relative;
+}
+
+.hero-selector-box-2 li:nth-child(1) {
+background-color: var(--color-muted-blue);
+padding-block: 0.75rem;
+border-radius: 1rem;
+color: var(--color-primary-blue);
+}
 
 .hero-tabs {
   display: flex;
@@ -554,21 +667,39 @@ display: none;
 
 
 .hero-tabs .tab-item a,
-.hero-tabs .tab-item span {
+.hero-tabs .tab-item span,
+.hero-tabs .tab-item label {
   display: block;
   padding: 15px 35px;
   border-top-right-radius: 1.5rem; 
   border-top-left-radius: 1.5rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
-/* Aktivní  záložka (Prodej) */
-.hero-tabs .tab-item.active span {
+.hero-tabs .tab-item label {
+  background-color: #E2E8F0;
+  color: #1A6696;
+  transition: background-color 0.2s ease;
+}
+
+.hero-tabs .tab-item label:hover {
+  background-color: #CBD5E1;
+}
+
+.vehicle-tab-panels {
+  overflow: hidden;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 3.5rem;
+  border-bottom-left-radius: 3.5rem;
+}
+
+#vehicle-tab-sale:checked ~ .hero-tabs label[for="vehicle-tab-sale"],
+#vehicle-tab-buy:checked ~ .hero-tabs label[for="vehicle-tab-buy"] {
   background-color: #38AFF9; 
   color: var(--color-white);
 }
 
-/* Neaktivní šedá záložka */
 .hero-tabs .tab-item:not(.active) a {
   background-color: #E2E8F0; 
   color: #1A6696;            
@@ -579,15 +710,54 @@ display: none;
   background-color: #CBD5E1; 
 }
 
+.vehicle-tab-switcher {
+  min-width: 0;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.vehicle-tab-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.vehicle-tab-input:focus-visible ~ .hero-tabs label {
+  outline: 3px solid var(--color-primary-blue);
+  outline-offset: 2px;
+}
+
+.vehicle-tab-panel {
+  display: none;
+}
+
+.hero-selector-box.vehicle-tab-panel {
+  display: none;
+}
+
+#vehicle-tab-sale:checked ~ .vehicle-tab-panels #vehicle-panel-sale {
+  display: flex;
+}
+
+#vehicle-tab-buy:checked ~ .vehicle-tab-panels #vehicle-panel-buy {
+  display: block;
+}
 
 /* --- UPRAVENÉ: Hlavní modrý box s ikonami --- */
-.hero-selector-box {
+.hero-selector-box,
+.hero-selector-box-2 {
   display: flex;
   flex-direction: column;
   gap: var(--gap-md);
   align-items: center;
   background: linear-gradient(to bottom, #38AFF9, #1A6696);
-  padding: 4rem 2rem; 
+  padding: 2.5rem 2rem; 
   
   border-top-left-radius: 0; 
   border-top-right-radius: 1.5rem;
@@ -597,7 +767,12 @@ display: none;
   color: var(--color-white);
 }
 
-.hero-selector-box ul {
+.hero-selector-box-2 {
+  border-radius: 2rem;
+}
+
+.hero-selector-box ul,
+.hero-selector-box-2 ul {
   display: flex;
   flex-wrap: wrap; 
   
@@ -605,24 +780,31 @@ display: none;
   list-style: none;
   justify-content: center; 
   align-items: flex-start; 
-  gap: var(--gap-md); 
+  gap: var(--gap-sm); 
   padding: 0;
   margin: 0;
 }
 
 
-.hero-selector-box ul li {
+.hero-selector-box ul li,
+.hero-selector-box-2 ul li {
   flex: 1 1 100px; 
   max-width: 140px; 
 }
 
-.hero-selector-box ul li img {
-  max-height: 2.8rem;
-  margin: 1rem auto;
+.hero-selector-box ul li img,
+.hero-selector-box-2 ul li img {
+  max-height: 2rem;
+  margin: 0.5rem auto;
   display: block;
 }
+.hero-selector-box ul li svg,
+.hero-selector-box-2 ul li svg {
+max-width: 90%;
+}
 
-.hero-selector-box ul li a {
+.hero-selector-box ul li a,
+.hero-selector-box-2 ul li a {
   color: inherit;
   text-decoration: none;
   text-align: center;
@@ -660,7 +842,7 @@ display: none;
 .section-deals {
   
   
-  padding-block: 8rem;
+  padding-block: 6rem;
   padding-inline: var(--space-sm);
 }
 
@@ -811,6 +993,34 @@ display: none;
   color: var(--color-border-yellow);
   text-align: center;
 }
+
+.email::before {
+  content: url("../img/email-icon.svg");
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.website::before {
+  content: url("../img/web-icon.svg");
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+.mobil::before {
+  content: url("../img/mobil-icon.svg");
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
 .contact-number {
   font-size: var(--font-xl);
   font-weight: 900;
@@ -832,7 +1042,7 @@ display: none;
   
   
   padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: 2rem;
   padding-inline: var(--space-sm);
   margin-top: -1px; 
   }
@@ -844,7 +1054,7 @@ display: none;
 .section-new-cars .content-wrapper {
   display: block!important; 
   width: 100%!important;
-  max-width: 1880px; 
+  max-width: 1480px; 
   margin: 0 auto;
   position: relative;
   /*overflow: hidden; */
@@ -969,12 +1179,72 @@ background-color: color-mix(in srgb, var(--color-accent-blue) 16%, transparent);
   align-items: center;
   width: 100%;
   
-}
+} 
 
 .section-services h1 {
  color: var(--color-primary-blue);
 }
 
+.service-detail .f-row {
+  align-items: start;
+
+}
+.service-detail ul {
+  list-style: none;
+  padding-left: 0;
+}
+.service-detail li[class$="-icon"] {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border-top: 1px solid var(--color-muted-blue);
+  padding-block: var(--space-sm);
+  
+}
+.service-detail li[class$="-icon"]:last-child {
+  border-bottom: 1px solid var(--color-muted-blue);
+}
+.service-detail li[class$="-icon"]::before {
+  content: "";
+  flex: 0 0 2.625rem;
+  width: 2.625rem;
+  height: 2.625rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.service-detail .opravy-icon::before {
+  background-image: url("../img/opravy-ico.svg");
+}
+.service-detail .klimatizace-icon::before {
+  background-image: url("../img/klimatizace-ico.svg");
+}
+.service-detail .diagnostika-icon::before {
+  background-image: url("../img/diagnostika-ico.svg");
+}
+.service-detail .pneumatiky-icon::before {
+  background-image: url("../img/pneumatiky-ico.svg");
+}
+.service-detail .autoskla-icon::before {
+  background-image: url("../img/autoskla-ico.svg");
+}
+.service-detail .pneuservis-icon::before {
+  background-image: url("../img/pneuservis-ico.svg");
+}
+.service-detail .prodejpneu-icon::before {
+  background-image: url("../img/prodejpneu-ico.svg");
+}
+.blue {
+  background-color: #d3e4f2;
+  padding: var(--space-md);
+  border-radius: 1rem;
+  h3 {
+    padding-bottom: var(--space-xs);
+  }
+  p {
+    color: var(--color-primary-blue);
+  }
+}
 
 
 
@@ -995,10 +1265,8 @@ background-color: color-mix(in srgb, var(--color-accent-blue) 16%, transparent);
   display: flex;
   flex-wrap: wrap; 
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
   align-items: center;
-  gap: 3rem;
   position: relative;
   background-color: var(--color-accent-blue);
   justify-content: space-between;
@@ -1417,7 +1685,7 @@ header {
     width: 100%;
     flex-direction: row;
     justify-content: center; 
-    gap: var(--gap-md);
+    gap: var(--gap-sm);
     list-style: none;
     align-items: center; 
     
@@ -1693,10 +1961,31 @@ color: var(--color-primary-black)}
     color: var(--color-primary-red);
 }
 
-.opening-hours p {
+.opening-hours {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
+    align-items: flex-start; /* Ikona bude nahoře zarovnaná s prvním řádkem textu */
+    gap: 0.8rem; /* Mezera mezi ikonou a textem vpravo */
+}
+
+/* Samotná ikona přes pseudo-prvek */
+.opening-hours::before {
+    content: "";
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    flex-shrink: 0; /* Zabrání nechtěnému smrštění ikony */
+    background-image: url("../img/otviracka-icon.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.opening-hours p, 
+.opening-hours .text-content {
+    display: flex;
+    flex-direction: column; /* Zajistí, že "Otevírací doba:" i dny půjdou úhledně pod sebe */
+    margin: 0; /* Vynuluje výchozí vnější okraje odstavce */
 }
 
 .bank-title {
@@ -1767,7 +2056,7 @@ select#car-sort, select#pobocky-sort  {
 
 .car-image {
   display: block;
-  height: 430px;
+  height: 330px;
   object-fit: cover;
   border-radius: 0.5rem;
 }
@@ -2332,5 +2621,206 @@ h3.red {
     box-sizing: border-box;
 }
 
+.vehicle-offer-section {
+  padding: var(--space-md);
+  color: var(--color-white);
+  background: linear-gradient(to bottom, #38AFF9, #1A6696);
+}
 
+.vehicle-offer-form {
+  max-width: 1280px;
+  margin-inline: auto;
+}
 
+.vehicle-offer-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.vehicle-offer-heading h1,
+.vehicle-offer-heading h2 {
+  margin: 0;
+  padding: 0;
+  color: var(--color-white);
+  font-size: var(--font-lg);
+}
+
+.vehicle-offer-heading p {
+  margin: 0;
+  font-size: var(--font-sm);
+  text-align: right;
+}
+
+.vehicle-offer-fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.vehicle-offer-field {
+  min-width: 0;
+}
+
+.vehicle-offer-field > label:not(.vehicle-offer-dropzone),
+.vehicle-offer-upload-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-white);
+  font-size: var(--font-sm);
+  font-weight: 700;
+}
+
+.vehicle-offer-required {
+  color: #ffda62;
+}
+
+.vehicle-offer-field input,
+.vehicle-offer-field textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 0.55rem;
+  padding: 0.65rem 0.8rem;
+  background: var(--color-white);
+  color: var(--color-primary-black);
+  font: inherit;
+}
+
+.vehicle-offer-field input {
+  min-height: 2.4rem;
+}
+
+.vehicle-offer-field textarea {
+  min-height: 9.75rem;
+  resize: vertical;
+}
+
+.vehicle-offer-field input:focus-visible,
+.vehicle-offer-field textarea:focus-visible,
+.vehicle-offer-dropzone:focus-within {
+  outline: 3px solid #ffda62;
+  outline-offset: 2px;
+}
+
+.vehicle-offer-message,
+.vehicle-offer-photos {
+  grid-column: span 2;
+}
+
+.vehicle-offer-dropzone {
+  display: flex;
+  min-height: 9.75rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: 2px dashed rgba(255, 255, 255, 0.75);
+  border-radius: 0.55rem;
+  padding: var(--space-sm);
+  color: var(--color-white);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.vehicle-offer-dropzone:hover {
+  border-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.vehicle-offer-dropzone svg {
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.vehicle-offer-dropzone strong {
+  font-size: var(--font-md);
+}
+
+.vehicle-offer-file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.vehicle-offer-field input.vehicle-offer-file-input {
+  width: 1px;
+  height: 1px;
+}
+
+.vehicle-offer-submit {
+  grid-column: 4;
+  justify-self: end;
+  min-width: 10rem;
+  border: 0;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  background: var(--color-border-yellow);
+  color: var(--color-white);
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.vehicle-offer-submit:hover {
+  background-color: var(--color-primary-blue);
+}
+
+.vehicle-offer-submit:focus-visible {
+  outline: 3px solid var(--color-white);
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .vehicle-offer-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vehicle-offer-submit {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .vehicle-offer-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .vehicle-offer-heading p {
+    text-align: left;
+  }
+
+  .vehicle-offer-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vehicle-offer-message,
+  .vehicle-offer-photos,
+  .vehicle-offer-submit {
+    grid-column: 1;
+  }
+
+  .vehicle-offer-submit {
+    width: 100%;
+  }
+}
