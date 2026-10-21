@@ -596,6 +596,8 @@ display: none;
     grid-template-columns: 1fr ;
     align-items: flex-end;
     margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -609,10 +611,26 @@ display: none;
     background-size: cover;
     width: 100%;
     position: relative;
+    isolation: isolate;
     min-height: 640px;
     color: var(--color-white);
     padding-bottom: 6rem;
 
+}
+
+.section-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .section-hero-video {
+        display: none;
+    }
 }
 
 .section-hero h2 {
