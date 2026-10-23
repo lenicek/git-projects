@@ -41,11 +41,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Preload the stylesheet (optional but can improve performance) -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 
     <!-- Fallback for users with JavaScript disabled -->
     <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
     </noscript>
     
 </head>
@@ -139,36 +139,49 @@
         </div>
       </section>
       <section>
-        <div class="content-wrapper f-row ">
+        <div class="content-wrapper f-row car-detail-header">
         <h2>Mercedes-Benz Atego 818 Euro6 </h2>
-        <div class="skladem skladem--right">Libovolně dlouhý text</div>
+        <div class="skladem-wrapper">
+        <div class="skladem skladem--right"><span>Libovolně dlouhý text</span></div>
+        <div>
+             <div class="f-2 "> 
+              <div class="location">Vozidlo umístěno na pobočce Nové Strašecí </div>
+              <span style="font-size: 0.9rem; color: gray; text-align: right; ">Zpět na výpis</span>
+            </div>
+        </div>
+        </div>
       </div>
         <div class="content-wrapper f-row ">
             <div class="f-40">
                 <img src="img/mercedes-detail-vozu.jpg" alt="Mercedes-Benz Atego" style="width: 100%; height: auto; display: block;">
+                <h2 class="galerie">Galerie</h2>
+                <div class="detail-gallery-grid">
+                  <img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 5" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 6" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 7" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 8" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 9" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 10" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 11" class="gallery-img">
+                  <img src="img/iveco-01.jpg" alt="Ukázkový snímek galerie vozidla 12" class="gallery-img">
+                </div>
                  <div class="f-row gray" style="justify-content: space-between; ">
                   <div>
-                    <p><strong>VIN:</strong></p><p> WDB9670011L935093 	</p>
+                    <p><strong>VIN:</strong> WDB9670011L935093 	</p>
                   </div>
                   <div>
-                    <p><strong>Ev. č.:</strong></p><p> 26028-33</p>
+                    <p><strong>Ev. č.:</strong> 26028-33</p>
                   </div>
                 </div>
               </div>
               
 
               <div class="f-60">
-                <div class="f-row" style=" justify-content: space-between; ">
-                  <div class="f-2" >
-                    
-                    <div class="location">Vozidlo umístěno na pobočce Nové Strašecí </div>
-                 </div>
-                  <div>
-                  <div class="f-2 " style="display: flex; justify-content: flex-end;"> 
-                    <span style="font-size: 0.9rem; color: gray; text-align: right; ">Zpět na výpis</span>
-                </div>
-                </div>
-                </div>
+                
                 
                 
 
@@ -198,35 +211,19 @@
                                 <div class="f-row" style="justify-content: space-between; align-items: flex-start; ; align-items: center;">
                   <div>
                     <span style="font-size: 0.9rem; color: gray; display: block;">Prodejní cena:</span>
-                    <strong style="font-size: 1.8rem; color: var(--color-primary-blue)">295.000 Kč</strong>
+                    <div class="price-main detail-price-main">295.000 Kč</div>
                     <span style="font-size: 0.8rem; color: gray; display: block;">(Bez DPH)</span>
                   </div>
                   <div>
                     <a href="#" class="pop-vuz">Odeslat poptávku</a>
                   </div>
+                  
+                </div>
+                <div class="nabidka-fin"><p class="cena-fin">nebo <span>28 800 Kč</span> měsíčně</p><p class="text-muted">orientační splátka bez DPH</p></div>
                 </div>
 
 
               </div>
-        </div>
-      </section>
-      <section>
-        <div class="content-wrapper f-row">
-          <div class="f-col">
-            <h2 class="galerie">Galerie</h2>
-          </div>
-        </div>
-
-        <div class="content-wrapper f-row gallery">
-          <div class="f-4"><img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img"></div>
-          <div class="f-4"><img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img"></div>
-          <div class="f-4"><img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img"></div>
-          <div class="f-4"><img src="img/iveco-01.jpg" alt="Iveco S-Way 510" class="gallery-img"></div>
-          
-          </div>
-
-        <div class="content-wrapper f-row gallery-footer">
-          <a href="#" class="gallery-more">Zobrazit více »</a>
         </div>
       </section>
 
