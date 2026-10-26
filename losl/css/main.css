@@ -109,7 +109,7 @@
    75% šířky mínus jedna mezera (gap) 
   flex: 0 0 calc(75% - (var(--gap-md) * 1 / 4));}*/
 .f-9 {
-    flex: 0 0 calc(75% - (var(--gap-md) * 3 / 4) - 35px);
+    flex: 0 0 calc(75% - (var(--gap-md) * 3 / 4) );
     max-width:none;
   }
 
@@ -882,6 +882,7 @@ max-width: 90%;
   grid-template-columns: 1fr;
   gap: var(--gap-md); /* mezera mezi kartami */
   padding: var(--space-md);
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
@@ -967,7 +968,22 @@ max-width: 90%;
 
 }
 
-.car-card .price-main,
+.car-card .price-main {
+  display: block;
+  padding: calc(var(--gap-md) - 0.6rem) 3rem;
+  background-color: var(--color-primary-blue);
+  border-radius: 3rem;
+  font-size: var(--font-md);
+  font-weight: 800;
+  color: var(--color-white);
+
+  margin-top: auto; 
+  margin-bottom: var(--gap-sm);
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Detail si ponechá původní marginy */
 .detail-price-main {
   display: block;
   padding: calc(var(--gap-md) - 0.6rem) 3rem;
@@ -982,6 +998,15 @@ max-width: 90%;
 }
 
 .vehicle-list .car-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  .car-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
   & .car-image {
     overflow: hidden;
     display: flex;
@@ -990,9 +1015,13 @@ max-width: 90%;
     border-radius: 0.5rem;
     height: auto; /* Fixní výška pro všechny obrázky */
   }
+  .car-price-section {
+  margin-top: auto; 
 }
-
-.vehicle-list > .content-wrapper {padding: 0px;}
+}
+.vehicle-list > .content-wrapper {
+  padding: 0px;
+}
 
 /* Section quick contact */
 .quick-contact {
@@ -1871,6 +1900,29 @@ header {
     }
 }
 
+.mobil-popt {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-lg);
+
+}
+.mobil-popt::before {
+  content: url("../img/mobil-icon.svg");
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  
+  
+}
+
+.phone-number {
+    font-size: calc(var(--font-lg) + 0.2rem);
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+    
+}
+
 
 /*    form styles */
 
@@ -2609,6 +2661,60 @@ h3.red {
     background-color: var(--color-accent-blue); 
     color: var(--color-white);
         padding: 40px 20px;
+        
+}
+
+.vehicle-inquiry-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+.vehicle-inquiry-layout p {
+  font-size: calc(var(--font-md) + 0.2rem);
+}
+
+.vehicle-inquiry-form {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: var(--gap-md);
+    border-radius: 2rem;
+    background-color: var(--color-accent-blue);
+}
+
+.vehicle-inquiry-fields {
+    display: grid;
+    gap: 20px;
+}
+
+.vehicle-inquiry-contact-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.reprocess-section.dark-theme .vehicle-inquiry-captcha .captcha-visuals {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 10px;
+}
+
+.reprocess-section.dark-theme .vehicle-inquiry-captcha .captcha-visuals img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.reprocess-section.dark-theme .vehicle-inquiry-captcha .captcha-visuals .form-input {
+    width: 100%;
+    min-width: 0;
+}
+
+.vehicle-inquiry-submit {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .reprocess-section.dark-theme .form-heading h2 {
@@ -2687,8 +2793,7 @@ h3.red {
 
 /* Odesílací tlačítko */
 .reprocess-section.dark-theme .button-submit {
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     min-width: 10rem;
     background-color: var(--color-border-yellow); 
     color:var(--color-white);
@@ -2721,6 +2826,16 @@ h3.red {
 .reprocess-section.dark-theme .captcha-visuals .form-input {
     width: 100%; 
     box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .vehicle-inquiry-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .vehicle-inquiry-spacer {
+        display: none;
+    }
 }
 
 .vehicle-offer-section {

@@ -282,54 +282,62 @@
 
 
   <section class="reprocess-section dark-theme">
-    <div class="form-heading">
-        <h2>Poptat vůz</h2>
-    </div>
 
-    <form action="/cz/poptat-vuz/dekujeme.html" method="post" id="poptat-vuz" class="content-wrapper">
-        <div id="output"></div>
-        
-        <div class="f-row">
-            <div class="f-3-col">
-                <label for="company">Jméno, název firmy:</label>
-                <input class="form-input" type="text" name="company" id="company">
-            </div>
-            <div class="f-3-col">
-                <label for="phone">Váš telefon:</label>
-                <input class="form-input" type="text" name="phone" id="phone">
-            </div>
-            <div class="f-3-col">
-                <label for="email">Váš e-mail:</label>
-                <input class="form-input" type="email" name="email" id="email">
-            </div>
+
+    <div class="vehicle-inquiry-layout content-wrapper">
+        <div class="vehicle-inquiry-spacer" aria-hidden="true">
+          <h1>POPTAT VŮZ</h1>    
+          <h2>Máte o tento vůz zájem?</h2>   
+          <p>Nechte nám na sebe kontakt a náš obchodník se vám ozve. Rádi zodpovíme dotazy, domluvíme prohlídku nebo připravíme nabídku financování.</p>   
+                    
+          <p class="mobil-popt"><strong>Raději zavoláte?<br><span class="phone-number">+420 602 106 628</span></strong></p>
+
+
         </div>
+        <form action="/cz/poptat-vuz/dekujeme.html" method="post" id="poptat-vuz" class="vehicle-inquiry-form">
+            <div id="output"></div>
 
-        <div class="f-row main-content-row">
-            <div class="f-2-grid-col">
-                <label for="desc">Vaše zpráva:</label>
-                <textarea class="form-input" name="desc" id="desc" rows="8"></textarea>
-            </div>
-            
-            <div class="f-2-grid-col right-action-panel">
-                <div class="captcha-wrapper">
+            <div class="vehicle-inquiry-fields">
+                <div>
+                    <label for="name">Jméno:</label>
+                    <input class="form-input" type="text" name="name" id="name" autocomplete="name">
+                </div>
+                <div>
+                    <label for="company">Název firmy:</label>
+                    <input class="form-input" type="text" name="company" id="company" autocomplete="organization">
+                </div>
+                <div class="vehicle-inquiry-contact-row">
+                    <div>
+                        <label for="phone">Váš telefon:</label>
+                        <input class="form-input" type="tel" name="phone" id="phone" autocomplete="tel">
+                    </div>
+                    <div>
+                        <label for="email">Váš e-mail:</label>
+                        <input class="form-input" type="email" name="email" id="email" autocomplete="email">
+                    </div>
+                </div>
+                <div>
+                    <label for="desc">Vaše zpráva:</label>
+                    <textarea class="form-input" name="desc" id="desc" rows="5"></textarea>
+                </div>
+                <div class="vehicle-inquiry-captcha">
                     <label for="cap">Opište kód z obrázku:</label>
                     <div class="captcha-visuals">
                         <img src="img/captcha.jpg" alt="CAPTCHA">
                         <input class="form-input" type="text" name="cap" id="cap">
                     </div>
                 </div>
-                
-                <div class="submit-wrapper">
+                <div class="vehicle-inquiry-submit">
                     <button type="submit" name="submit" class="button-submit">
                         Odeslat poptávku
                     </button>
                 </div>
             </div>
-        </div>
 
-        <input type="hidden" name="pobocka" value="1">
-        <input type="hidden" name="check" value="474GGT35MM1700">
-    </form>
+            <input type="hidden" name="pobocka" value="1">
+            <input type="hidden" name="check" value="474GGT35MM1700">
+        </form>
+    </div>
 </section>
 
 
