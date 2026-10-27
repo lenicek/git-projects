@@ -470,7 +470,7 @@ display: none;
   background-image: url(../img/minihero.jpg);
   background-size: cover; 
   background-position: center;
-  min-height: 10rem;
+  min-height: 15rem;
     h1 {
       color: var(--color-white);
       font-size: var(--font-xl);
