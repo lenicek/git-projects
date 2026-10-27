@@ -1130,6 +1130,8 @@ max-width: 90%;
 }
 
 
+
+
  /* === OPRAVENÝ SWIPER SEKCÍ === */
 
 .section-new-cars .mySwiper {
@@ -1155,15 +1157,28 @@ max-width: 90%;
   flex-shrink: 0 !important; /* Zabrání smrštění karty na nulu */
 }
 
+.swiper-slide .car-price-section {
+  margin-top: auto; 
+  margin-bottom: var(--gap-sm);
+  
+}
+
 .section-new-cars .car-card {
   width: 100% !important; /* Vyplní šířku slideu od Swiperu */
   max-width: 100% !important;
+  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
+.car-content {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 /* Šipky - úprava pozice, aby nebyly "nalepené" */
 .section-new-cars .swiper-button-next, 
 .section-new-cars .swiper-button-prev {
@@ -2185,7 +2200,7 @@ select#car-sort, select#pobocky-sort  {
   width: 2rem;
   height: 2rem;
    position: absolute;
-   top: 1px;
+   top: 0.5rem;
 }
 .nabidka-fin span {
   font-weight: 700;
@@ -2518,7 +2533,7 @@ min-width: 18em;
   margin-bottom: var(--gap-sm);
 }
 
-.skladem {
+.skladem-d {
   position: relative;
   display: inline-block;
   align-items: center;
@@ -2534,9 +2549,46 @@ min-width: 18em;
   
 }
 
+.skladem {
+  position: absolute;
+  display: inline-block;
+  min-height: 30px; 
+  padding: 1rem 2rem 1rem 3rem; 
+  font-size: 13px; 
+  font-weight: bold;
+  color: var(--color-white);
+  white-space: nowrap;
+  z-index: 1;
+  background-color: var(--color-primary-blue); 
+  border-radius: 3rem;
+  top: 1rem;
+  left: 1rem;
+  
+}
 
 
 
+
+
+
+.skladem-d::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px; 
+  height: 32px;
+  border-radius: 50%;
+  
+  /* vlajecka  */
+  background: url(../img/flags/cz-flag.svg) no-repeat center center;
+  background-size: cover;
+  
+  
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  z-index: 2;
+}
 
 .skladem::before {
   content: '';
