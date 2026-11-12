@@ -2009,5 +2009,160 @@ h3.red {
     box-sizing: border-box;
 }
 
+.rental-inquiry {
+    padding: 3rem 1rem;
+    background: var(--color-primary-black);
+    color: var(--color-white);
+    font-family: var(--font-main);
+}
+
+.rental-inquiry__form {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.rental-inquiry__form h2 {
+    margin: 0 0 0.75rem;
+    color: var(--color-accent-yellow);
+    font-size: var(--font-lg);
+    line-height: 1.3;
+}
+
+.rental-inquiry__contact {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.rental-inquiry__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+    align-items: end;
+}
+
+.rental-inquiry__field label,
+.rental-inquiry__choices legend {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--color-white);
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.rental-inquiry__field input,
+.rental-inquiry__field textarea {
+    display: block;
+    width: 100%;
+    min-height: 35px;
+    padding: 0.4rem 0.55rem;
+    border: 1px solid #b8b8b8;
+    border-radius: 5px;
+    background: #fff;
+    color: #111;
+    font: inherit;
+}
+
+.rental-inquiry__field textarea {
+    min-height: 55px;
+    resize: vertical;
+}
+
+.rental-inquiry__field input:focus,
+.rental-inquiry__field textarea:focus {
+    outline: 2px solid var(--color-accent-yellow);
+    outline-offset: 2px;
+}
+
+.rental-inquiry__choices {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.rental-inquiry__choice-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.8rem;
+}
+
+.rental-inquiry__choice-list label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-white);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.rental-inquiry__choice-list input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: var(--color-primary-red);
+}
+
+.rental-inquiry__rental-type {
+    margin-top: 0.7rem;
+}
+
+.rental-inquiry__message {
+    margin-top: 0.75rem;
+}
+
+.rental-inquiry__submit {
+    margin-top: 1.1rem;
+    padding: 0.55rem 1.1rem;
+    border: 0;
+    border-radius: 4px;
+    background: var(--color-primary-red);
+    color: var(--color-white);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.rental-inquiry__submit:hover {
+    background: var(--color-red-hover);
+}
+
+.rental-inquiry__submit:focus-visible {
+    outline: 2px solid var(--color-accent-yellow);
+    outline-offset: 3px;
+}
+
+.rental-inquiry__privacy {
+    margin-top: 0.45rem;
+    font-size: 0.8rem;
+}
+
+.rental-inquiry__privacy a {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .rental-inquiry__contact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.8rem;
+    }
+
+    .rental-inquiry__details {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .rental-inquiry {
+        padding: 2rem 1rem;
+    }
+
+    .rental-inquiry__contact {
+        grid-template-columns: 1fr;
+    }
+}
 
 

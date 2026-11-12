@@ -128,6 +128,62 @@
             </div>
         </div>
     </div>
+    </section>
+
+
+      <section class="rental-inquiry" aria-labelledby="rental-inquiry-title">
+        <div class="content-wrapper">
+          <form class="rental-inquiry__form" method="post">
+            <h2 id="rental-inquiry-title">Nezávazná poptávka pronájmu</h2>
+            <div class="rental-inquiry__contact">
+              <div class="rental-inquiry__field">
+                <label for="rental-name">Jméno a příjmení <span aria-hidden="true">*</span></label>
+                <input id="rental-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="rental-inquiry__field">
+                <label for="rental-phone">Telefon <span aria-hidden="true">*</span></label>
+                <input id="rental-phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+              <div class="rental-inquiry__field">
+                <label for="rental-email">E-mail <span aria-hidden="true">*</span></label>
+                <input id="rental-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="rental-inquiry__details">
+              <div class="rental-inquiry__field">
+                <label for="rental-company">Firma nebo IČO</label>
+                <input id="rental-company" name="company" type="text" autocomplete="organization">
+              </div>
+              <fieldset class="rental-inquiry__choices">
+                <legend>O jaké vozidlo máte zájem?</legend>
+                <div class="rental-inquiry__choice-list">
+                  <label><input type="checkbox" name="vehicle[]" value="tahac"> Tahač</label>
+                  <label><input type="checkbox" name="vehicle[]" value="naves"> Návěs</label>
+                  <label><input type="checkbox" name="vehicle[]" value="prives"> Přívěs</label>
+                  <label><input type="checkbox" name="vehicle[]" value="nakladni-vozidlo"> Nákladní vozidlo</label>
+                  <label><input type="checkbox" name="vehicle[]" value="jine"> Jiné</label>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="rental-inquiry__choices rental-inquiry__rental-type">
+              <legend>Forma pronájmu</legend>
+              <div class="rental-inquiry__choice-list">
+                <label><input type="radio" name="rental_type" value="kratkodoby"> Krátkodobý pronájem</label>
+                <label><input type="radio" name="rental_type" value="odkup"> Pronájem s odkupem</label>
+              </div>
+            </fieldset>
+            <div class="rental-inquiry__field rental-inquiry__message">
+              <label for="rental-message">Zpráva</label>
+              <textarea id="rental-message" name="message" rows="2"></textarea>
+            </div>
+            <button class="rental-inquiry__submit" type="submit">Odeslat nezávaznou poptávku</button>
+            <p class="rental-inquiry__privacy">Osobní údaje zpracujeme pouze pro vyřízení Vaší poptávky. Více v <a href="gdpr.html">zásadách ochrany osobních údajů</a>.</p>
+          </form>
+        </div>
+      </section>
+      
+      <section>  
+        <div class="content-wrapper">
 
     <div class="f-row">
         <div class="f-col">
@@ -175,7 +231,10 @@
         </div>
     </div>
     </div>
+    
+
 </section>
+
 
       <section class="section-newsletter">
           <div class="content-wrapper">
