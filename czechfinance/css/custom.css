@@ -665,6 +665,12 @@ padding-inline: var(--space-md);
   }
 }
 
+/*  czech finance info */
+
+.czech-finance-info {
+  padding: var(--space-lg) var(--space-md);
+}
+
 /* NEW CARS */
 .section-new-cars, .section-deals {
   padding: 4rem var(--space-sm) 8rem;
