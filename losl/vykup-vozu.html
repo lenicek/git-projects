@@ -63,8 +63,7 @@
           <li><a href="o-firme.html" >O firmě</a></li>
           <li><a href="nabidka-vozu.html">Nabídka vozidel</a></li>
           <li><a href="navesy-kogel.html">Nové návěsy</a></li>
-          <li><a href="prodej-vozu.html">Prodej vozů</a></li>
-          <li><a href="vykup-vozu.html" aria-current="page">Výkup vozů</a></li>
+          <li><a href="vykup-vozu.html" aria-current="page">Výkup vozidel</a></li>
           <li><a href="dovoz.html">Dovoz</a></li>
           <li><a href="financovani-vozu.html">Financování</a></li>
           <li><a href="https://www.czechfinance.cz/" target="blank">Pronájem</a></li>
@@ -138,7 +137,106 @@
           </div>
         </div>
       </section>
-      <section >
+      <section class="reprocess-section">
+          <form
+            class="vehicle-offer-form"
+            action="/cz/komisni-prodej/dekujeme.html"
+            method="post"
+            enctype="multipart/form-data"
+            id="komisni-prodej"
+          >
+            <div class="vehicle-offer-heading">
+              <h2 id="vehicle-offer-title">Nabídněte nám svůj vůz</h2>
+              <p>Pole označená <span class="vehicle-offer-required" aria-hidden="true">*</span> jsou povinná</p>
+            </div>
+
+            <div class="vehicle-offer-fields">
+              <div class="vehicle-offer-field">
+                <label for="company">Jméno, název firmy <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" name="company" id="company" autocomplete="name" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="phone">Váš telefon <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" name="phone" id="phone" autocomplete="tel" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="email">Váš e-mail <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="email" name="email" id="email" autocomplete="email" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="brand">Vozidlo <span class="vehicle-offer-required" aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" name="brand" id="brand" placeholder="např. DAF XF 480" required>
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="year">První registrace</label>
+                <input class="form-input" type="text" name="year" id="year" placeholder="MM/RRRR" inputmode="numeric">
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="mileage">Najeto</label>
+                <input class="form-input" type="number" name="mileage" id="mileage" min="0" placeholder="km">
+              </div>
+              <div class="vehicle-offer-field">
+                <label for="price">Cena</label>
+                <input class="form-input" type="text" name="price" id="price" placeholder="Kč">
+              </div>
+              <div class="vehicle-offer-field vehicle-offer-message">
+                <label for="desc">Vaše zpráva</label>
+                <textarea class="form-input" name="desc" id="desc" rows="6" placeholder="Stav vozu, výbava, servisní historie..."></textarea>
+              </div>
+              <div class="vehicle-offer-field vehicle-offer-photos">
+                <span class="vehicle-offer-upload-label" id="upload-label">Fotografie (jpeg/png/gif)</span>
+                <label class="vehicle-offer-dropzone" for="upload" aria-describedby="upload-help">
+                  <input
+                    class="vehicle-offer-file-input"
+                    type="file"
+                    name="upload[]"
+                    id="upload"
+                    accept="image/jpeg,image/png,image/gif"
+                    multiple
+                    aria-labelledby="upload-label"
+                  >
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 3h-9a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9"></path>
+                    <path d="M14 3v5h5M16 3v5h5M18.5 13v6M15.5 16h6"></path>
+                    <path d="m6 17 3.5-4 2.5 3 1.5-2 2.5 3"></path>
+                  </svg>
+                  <strong>Vyberte fotografie ze zařízení</strong>
+                  <span id="upload-help">Formáty JPG, PNG nebo GIF</span>
+                </label>
+              </div>
+              <input type="hidden" name="pobocka" value="1">
+              <input type="hidden" name="check" value="474GGT35MM1700">
+              <button class="vehicle-offer-submit" type="submit" name="submit">Odeslat</button>
+            </div>
+          </form>
+</section>
+
+ <section class="quick-contact">
+                                          
+          <div class="content-wrapper">
+              <div class="f-row">
+                  <div class="f-5 fl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="163.5" height="163.5" viewBox="0 0 163.5 163.5">
+        <g id="telefon-01" transform="translate(-0.9 -0.9)">
+          <path id="Path_115" data-name="Path 115" d="M111.218,96.871a71.022,71.022,0,0,1-8.638,10.489,22.408,22.408,0,0,1-5.553,4.319c-1.851,1.234-2.468,1.234-3.7.617-6.787,0-13.574-3.085-19.743-6.17C64.327,101.189,55.69,94.4,47.669,87.616S37.18,77.744,32.244,72.191c-8.638-9.255-17.892-20.977-22.828-32.7S6.331,30.237,5.714,25.3s0-2.468.617-3.7a34.223,34.223,0,0,1,3.7-4.936A49.143,49.143,0,0,1,20.522,7.408c3.7-2.468,3.7-1.851,6.17-1.851s3.7,1.234,4.936,3.085L45.818,29.62c1.851,2.468.617,5.553,0,8.638l-5.553,9.872c3.085,4.936,7.4,8.638,11.106,12.957l6.17,6.17a107.422,107.422,0,0,0,8.638,7.4l4.319,3.7,9.872-5.553a8.917,8.917,0,0,1,4.319-1.234,7.419,7.419,0,0,1,4.936,1.234L110.6,87c1.234,1.234,2.468,2.468,2.468,4.319s0,4.319-1.851,6.17Zm-14.191,8.638,3.7-3.7a42.481,42.481,0,0,0,6.787-8.021c1.851-3.085.617-2.468,0-3.7L85.922,75.893a7.825,7.825,0,0,0-3.7.617L70.5,83.3a11.067,11.067,0,0,1-4.319-3.085c-2.468-1.851-4.319-3.7-6.787-5.553C54.456,69.723,49.52,65.4,44.584,59.852A78.152,78.152,0,0,1,37.8,51.831c-1.851-2.468-1.851-2.468-3.085-4.319L41.5,35.79c.617-1.234,1.234-2.468.617-3.7L27.925,10.493h-3.7c-3.7,3.085-8.638,7.4-12.34,11.106s-1.234,1.851-1.851,3.085c0,2.468,0,5.553,1.234,8.021,3.7,12.34,13.574,25.3,22.211,34.551S44.584,78.978,50.137,83.914c8.638,7.4,19.126,16.041,29.615,20.36s8.638,3.085,12.957,3.085c1.234,0,2.468-1.234,3.7-2.468Z" transform="translate(23.567 23.724)" fill="#fff"/>
+          <path id="Path_116" data-name="Path 116" d="M82.958,164.4C37.919,164.4.9,128,.9,82.958S37.919.9,82.958.9a81.441,81.441,0,1,1,0,162.883Zm0-157.33a75.889,75.889,0,1,0,75.889,75.889A75.834,75.834,0,0,0,82.958,7.07Z" transform="translate(0 0)" fill="#fff"/>
+        </g>
+      </svg>
+
+                  </div>
+                                            
+                  <div class="f-60 ">
+                    <h1 class="contact-info"> Výkup a prodej vozidel: </h1>
+                    <Span class="contact-number">+420 602 106 628</span>
+                  </div>
+                  <div class="f-5 fl">
+                    <button class="cta-button">KONTAKTOVAT</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <section class="main-text">
         <div class="content-wrapper">
     <div class="f-row">
         <div class="f-col">
@@ -170,130 +268,6 @@ Prodejte ho nám…</h2>
   </div>
 
  </section>
- <section class="quick-contact">
-                                          
-          <div class="content-wrapper">
-              <div class="f-row">
-                  <div class="f-5 fl">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="163.5" height="163.5" viewBox="0 0 163.5 163.5">
-        <g id="telefon-01" transform="translate(-0.9 -0.9)">
-          <path id="Path_115" data-name="Path 115" d="M111.218,96.871a71.022,71.022,0,0,1-8.638,10.489,22.408,22.408,0,0,1-5.553,4.319c-1.851,1.234-2.468,1.234-3.7.617-6.787,0-13.574-3.085-19.743-6.17C64.327,101.189,55.69,94.4,47.669,87.616S37.18,77.744,32.244,72.191c-8.638-9.255-17.892-20.977-22.828-32.7S6.331,30.237,5.714,25.3s0-2.468.617-3.7a34.223,34.223,0,0,1,3.7-4.936A49.143,49.143,0,0,1,20.522,7.408c3.7-2.468,3.7-1.851,6.17-1.851s3.7,1.234,4.936,3.085L45.818,29.62c1.851,2.468.617,5.553,0,8.638l-5.553,9.872c3.085,4.936,7.4,8.638,11.106,12.957l6.17,6.17a107.422,107.422,0,0,0,8.638,7.4l4.319,3.7,9.872-5.553a8.917,8.917,0,0,1,4.319-1.234,7.419,7.419,0,0,1,4.936,1.234L110.6,87c1.234,1.234,2.468,2.468,2.468,4.319s0,4.319-1.851,6.17Zm-14.191,8.638,3.7-3.7a42.481,42.481,0,0,0,6.787-8.021c1.851-3.085.617-2.468,0-3.7L85.922,75.893a7.825,7.825,0,0,0-3.7.617L70.5,83.3a11.067,11.067,0,0,1-4.319-3.085c-2.468-1.851-4.319-3.7-6.787-5.553C54.456,69.723,49.52,65.4,44.584,59.852A78.152,78.152,0,0,1,37.8,51.831c-1.851-2.468-1.851-2.468-3.085-4.319L41.5,35.79c.617-1.234,1.234-2.468.617-3.7L27.925,10.493h-3.7c-3.7,3.085-8.638,7.4-12.34,11.106s-1.234,1.851-1.851,3.085c0,2.468,0,5.553,1.234,8.021,3.7,12.34,13.574,25.3,22.211,34.551S44.584,78.978,50.137,83.914c8.638,7.4,19.126,16.041,29.615,20.36s8.638,3.085,12.957,3.085c1.234,0,2.468-1.234,3.7-2.468Z" transform="translate(23.567 23.724)" fill="#fff"/>
-          <path id="Path_116" data-name="Path 116" d="M82.958,164.4C37.919,164.4.9,128,.9,82.958S37.919.9,82.958.9a81.441,81.441,0,1,1,0,162.883Zm0-157.33a75.889,75.889,0,1,0,75.889,75.889A75.834,75.834,0,0,0,82.958,7.07Z" transform="translate(0 0)" fill="#fff"/>
-        </g>
-      </svg>
-
-                  </div>
-                                            
-                  <div class="f-60 ">
-                    <h1 class="contact-info"> Výkup a prodej vozidel: </h1>
-                    <Span class="contact-number">+420 602 106 628</span>
-                  </div>
-                  <div class="f-5 fl">
-                    <button class="cta-button">KONTAKTOVAT</button>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section class="reprocess-section">
-    <form action="/cz/komisni-prodej/dekujeme.html" method="post" enctype="multipart/form-data" id="komisni-prodej" class="content-wrapper">
-        <div id="output"></div>
-        
-        <div class="f-row">
-            <div class="f-col">
-                <h3>Vyplňte prosím všechna pole a odešlete formulář.</h3>
-            </div>
-        </div>
-
-        <div class="f-row">
-            <div class="f-4">
-                <label for="company">Jméno, název firmy:</label>
-                <input class="form-input" type="text" name="company" id="company">
-            </div>
-            <div class="f-4">
-                <label for="address">Adresa:</label>
-                <input class="form-input" type="text" name="address" id="address">
-            </div>
-            <div class="f-4">
-                <label for="phone">Váš telefon:</label>
-                <input class="form-input" type="text" name="phone" id="phone">
-            </div>
-            <div class="f-4">
-                <label for="email">Váš e-mail:</label>
-                <input class="form-input" type="email" name="email" id="email">
-            </div>
-        </div>
-
-        <div class="f-row">
-            <div class="f-4">
-                <label for="brand">Výrobce:</label>
-                <input class="form-input" type="text" name="brand" id="brand">
-            </div>
-            <div class="f-4">
-                <label for="model">Model vozu:</label>
-                <input class="form-input" type="text" name="model" id="model">
-            </div>
-            <div class="f-4">
-                <label for="year">Rok první registrace:</label>
-                <input class="form-input" type="number" name="year" id="year">
-            </div>
-            <div class="f-4">
-                <label for="mileage">Najeto:</label>
-                <input class="form-input" type="number" name="mileage" id="mileage">
-            </div>
-        </div>
-
-        <div class="f-row">
-            <div class="f-4">
-                <label for="price">Cena:</label>
-                <input class="form-input" type="text" name="price" id="price">
-            </div>
-            <div class="f-4">
-                <label for="prodejni_cena">Nejbližší pobočka:</label>
-                <select class="form-input" type="text" name="prodejni_cena" id="prodejni_cena">
-                  <option value="">Vyberte pobočku</option>
-                  <option value="1">Pobočka 1</option>
-                  <option value="2">Pobočka 2</option>
-                  <option value="3">Pobočka 3</option>
-                </select>
-            </div>
-            <div class="f-4">
-                <label for="desc">Vaše zpráva:</label>
-                <input class="form-input" type="text" name="desc" id="desc">
-            </div>
-            <div class="f-4">
-                <label for="upload">Fotografie: <small>(jpeg/png/gif)</small></label>
-                <input class="form-input" type="file" name="upload[]" id="upload" accept="image/*" multiple>
-            </div>
-        </div>
-
-        <input type="hidden" name="pobocka" value="1">
-        <input type="hidden" name="check" value="474GGT35MM1700">
-
-        <div class="f-row captcha-container">
-            <div class="f-4">
-                </div>
-            <div class="f-4">
-                </div>
-            <div class="f-4">
-                </div>
-            
-            <div class="f-4 action-group">
-                <div class="captcha-box">
-                    <label for="cap">Opište kód z obrázku:</label>
-                    <div class="captcha-visuals">
-                        <img src="img/captcha.jpg" alt="CAPTCHA">
-                        <input class="form-input" type="text" name="cap" id="cap" placeholder="Kód sem...">
-                    </div>
-                </div>
-                
-                <button type="submit" name="submit" class="button-submit">
-                    ODESLAT FORMULÁŘ
-                </button>
-            </div>
-</div>
-    </form>
-</section>
-
     
 
       <section class="section-newsletter">
@@ -380,14 +354,12 @@ Prodejte ho nám…</h2>
           <li><a href="o-firme.html" aria-current="page">O firmě</a></li>
           <li><a href="nabidka-vozu.html">Nabídka vozidel</a></li>
           <li><a href="navesy-kogel.html">Nové návěsy</a></li>
-          <li><a href="prodej-vozu.html">Prodej vozů</a></li>
-          <li><a href="vykup-vozu.html">Výkup vozů</a></li>
+          <li><a href="vykup-vozu.html">Výkup vozidel</a></li>
           <li><a href="dovoz.html">Dovoz</a></li>
           <li><a href="financovani-vozu.html">Financování</a></li>
           <li><a href="https://www.czechfinance.cz/" target="blank">Pronájem</a></li>
           <li><a href="servis-vozu.html">Servis</a></li>
 	        <li><a href="kontakty.html">Kontakty</a></li>
-          <li><a href="dovoz.html">Dovoz</a></li>
       </ul>
 
       </div>

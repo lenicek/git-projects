@@ -251,7 +251,8 @@ text-align: right;
   padding-top: var(--space-xs);
   padding-bottom: var(--space-xs);
   text-align: right;
-  font-size: calc(var(--font-md) - 0.22rem);
+  font-size: calc(var(--font-md) - 0.1rem);
+  font-weight: 600;
   color: var(--color-primary-black);
   text-decoration: none;
   text-transform: uppercase;
@@ -483,6 +484,17 @@ display: none;
     }
 }
 
+.service-icon, .kontakty-icon, .o-firme-icon, .financovani-icon, .vykup-icon, .dovoz-icon, .prodej-icon, .nabidka-icon, .navesy-icon {
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+.service-icon::after, .kontakty-icon::after, .o-firme-icon::after, .financovani-icon::after, .vykup-icon::after, .dovoz-icon::after, .prodej-icon::after, .nabidka-icon::after, .navesy-icon::after {
+  display: none!important;
+}
+
+}
 .service-icon, .kontakty-icon, .o-firme-icon, .financovani-icon, .vykup-icon, .dovoz-icon, .prodej-icon, .nabidka-icon, .navesy-icon {
   position: relative;
 }
@@ -973,7 +985,7 @@ max-width: 90%;
   padding: calc(var(--gap-md) - 0.6rem) 3rem;
   background-color: var(--color-primary-blue);
   border-radius: 3rem;
-  font-size: var(--font-md);
+  font-size: calc(var(--font-md) + 0.6rem);
   font-weight: 800;
   color: var(--color-white);
 
@@ -989,7 +1001,7 @@ max-width: 90%;
   padding: calc(var(--gap-md) - 0.6rem) 3rem;
   background-color: var(--color-primary-blue);
   border-radius: 3rem;
-  font-size: var(--font-md);
+  font-size: calc(var(--font-md) + 0.6rem);
   font-weight: 800;
   color: var(--color-white);
   margin-block: var(--gap-sm);
@@ -2169,7 +2181,7 @@ select#car-sort, select#pobocky-sort  {
 
 .car-image {
   display: block;
-  height: 330px;
+  height: 430px;
   object-fit: cover;
   border-radius: 0.5rem;
 }
@@ -2190,8 +2202,9 @@ select#car-sort, select#pobocky-sort  {
   position: relative;
   display: block;
    padding-inline: 1rem;
-  font-size: calc(var(--font-sm) + 0.4rem);
+  font-size: calc(var(--font-sm) + 0.2rem);
   color: var(--color-primary-blue);
+  margin: 0 auto;
 
 }
 .nabidka-fin::before {
@@ -2885,9 +2898,9 @@ h3.red {
         grid-template-columns: minmax(0, 1fr);
     }
 
-    .vehicle-inquiry-spacer {
+    /* .vehicle-inquiry-spacer {
         display: none;
-    }
+    } */
 }
 
 .vehicle-offer-section {
